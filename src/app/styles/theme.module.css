@@ -1,0 +1,11 @@
+.thme_wrap {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  color: orange;
+  justify-content: center;
+  background-color: var(--secondary-color);
+  cursor: pointer;
+}

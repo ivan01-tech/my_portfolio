@@ -1,0 +1,8 @@
+.btn {
+  outline: none;
+  border: var(--border-btn-width) solid var(--secondary-color);
+  border-radius: 2rem;
+  padding: 0.2rem 1rem;
+  cursor: pointer;
+  font-weight: bold;
+}

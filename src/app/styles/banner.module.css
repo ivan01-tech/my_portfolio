@@ -1,0 +1,110 @@
+.banner {
+  width: 100%;
+  min-height: calc(100vh - 50px);
+  background-color: var(--primary-bg-color);
+  font-weight: bold;
+}
+
+.banner_wrap {
+  background-color: var(--primary-bg-color);
+  margin: auto;
+  width: 100%;
+  max-width: 56rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+/* =============== banner header ================ */
+.banner_header {
+  flex: 3;
+}
+.banner_hello {
+  font-size: 3vw;
+}
+.banner_name {
+  font-size: 4vw;
+
+  color: royalblue;
+}
+/* =================== TYPPING EFFECT STYLES =============== */
+.banner_description {
+  display: inline-block;
+}
+.text {
+  font-size: 2rem;
+  height: auto;
+  width: 100%;
+  border-right: 2px solid;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 6s 1s steps(26) infinite,
+    cursor 0.4s step-end alternate infinite;
+}
+/* ========== end typping ====================== */
+
+/* ====== MIDDLE ====== */
+.banner_middle {
+  flex: 2;
+}
+
+/* ============== banner_footer========== */
+.banner_footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  justify-self: end;
+}
+
+.banner_hireme_section {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.follow_btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+
+}
+/* ================ ANIMATION AND MEDIA QUERY ================== */
+/* animation for the typping effect */
+
+@keyframes cursor {
+  50% {
+    border-color: transparent;
+  }
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  40%,
+  85% {
+    width: 100%;
+  }
+  90%,
+  100% {
+    width: 0;
+  }
+}
+/* end animation for the typping effect */
+
+/* ================MEDIA QUERY================ */
+@media screen and (max-width: 470px) {
+  .text {
+    font-size: 1.7rem;
+  }
+}
+
+@media screen and (max-width: 689px) {
+  .banner_hello {
+    font-size: 2rem;
+  }
+  .banner_name {
+    font-size: 2.5rem;
+  }
+}
