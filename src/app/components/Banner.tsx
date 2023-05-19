@@ -3,27 +3,26 @@ import styles from "../styles/banner.module.css";
 import Button from "./Button";
 import Link from "next/link";
 import { FollowMeBtn } from "./FollowMeBtn";
-import {  BsGithub, BsTwitter } from "react-icons/bs";
+import { BsGithub, BsTwitter } from "react-icons/bs";
 import { GrLinkedin } from "react-icons/gr";
 
-type Props = {  };
+type Props = {};
 
 function Banner({}: Props) {
   return (
     <section className={styles.banner} id="home">
-
       <section className={styles.banner_wrap}>
-        
         <section className={styles.banner_header}>
           <h1 className={styles.banner_hello}>Hey , I'm</h1>
           <h1 className={styles.banner_name}>Silatsa Ivan</h1>
           <section className={styles.banner_description}>
-          <h3 className={styles.text}>A React Frontend Developer{" "}</h3>
+            <h3 className={styles.text}>A React Frontend Developer </h3>
           </section>
         </section>
 
         <section className={styles.banner_middle}>
-          I like to  build , test, and deploy web apps using JavaScript technologies.
+          I like to build , test, and deploy web apps using JavaScript
+          technologies.
         </section>
 
         <section className={styles.banner_footer}>
@@ -50,7 +49,6 @@ function Banner({}: Props) {
             </FollowMeBtn>
           </section>
         </section>
-
       </section>
     </section>
   );
