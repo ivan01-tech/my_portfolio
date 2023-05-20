@@ -56,7 +56,7 @@ export const skillsObj: SkillType[] = [
     path: "/logos/redux.svg",
   },
   {
-    name: "Tailwind CSS",
+    name: "Tailwind",
     path: "/logos/tailwindcss-icon.svg",
   },
   {

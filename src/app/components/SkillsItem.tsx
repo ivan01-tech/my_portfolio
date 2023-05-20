@@ -6,10 +6,10 @@ type Props = { skill: SkillType };
 function SkillsItem({ skill }: Props) {
   return (
     <section className={styles.skill_wrap}>
-      <figure>
-        <caption>
-          <Image src={skill.path} alt={skill.name} width={50} height={50} />
-        </caption>
+      <figure className={styles.skill_content}>
+        <div className={styles.skill_head}>
+          <Image src={skill.path} alt={skill.name} width={80} height={80} />
+        </div>
         <figcaption>{skill.name}</figcaption>
       </figure>
     </section>

@@ -14,7 +14,7 @@ function Skills({ }: Props) {
       </p>
       <div>
         {
-          skillsObj.map(elt=> <SkillsItem skill={elt}  /> )[0]
+          skillsObj.map((elt,ind)=> <SkillsItem key={(elt.name+ind)} skill={elt}  /> )
         }
       </div>
     </section>
