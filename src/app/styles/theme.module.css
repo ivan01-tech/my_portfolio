@@ -8,4 +8,5 @@
   justify-content: center;
   background-color: var(--secondary-color);
   cursor: pointer;
+  font-size: 1.2rem;
 }
