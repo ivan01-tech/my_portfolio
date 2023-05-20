@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import Banner from "@/app/components/Banner";
 import NavBarMobile from "./components/NavBarMobile";
 import { MobileMenuPovider } from "./Context/MobileMenu";
+import Skills from './components/Skills';
 
 export const metadata = {
   title: "Ivan01-tech | Portfolio",
@@ -23,6 +24,7 @@ export default function RootLayout({
           <Header />
           <NavBarMobile />
           <Banner />
+          <Skills  />
           {children}
         </MobileMenuPovider>
       </body>

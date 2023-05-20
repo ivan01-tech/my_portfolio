@@ -17,6 +17,11 @@ function NavBarMobile({}: Props): React.JSX.Element {
   const mobileWrapperRef = useRef<HTMLElement | null>(null);
 
   const { toggleMobileMenu, ShowMobileMenu } = useMobile()!;
+/**
+ * the function to call went a link is clicked
+ * @returns 
+ */
+  const clickHandler = ()=>toggleMobileMenu(null)
 /* 
   useEffect(() => {
     if (!mobileWrapperRef?.current) return;
@@ -69,13 +74,13 @@ function NavBarMobile({}: Props): React.JSX.Element {
 
         <nav className={styles.mobile_nav}>
           <ul>
-            <Link href={"/"}>
+            <Link href={"/"} onClick={clickHandler}>
               <li>Accueil</li>
             </Link>
-            <Link href={"/"}>
+            <Link href={"#skills"} onClick={clickHandler}>
               <li>Skills</li>
             </Link>
-            <Link href={"/"}>
+            <Link href={"/"} onClick={clickHandler}>
               <li>Portfolio</li>
             </Link>
           </ul>

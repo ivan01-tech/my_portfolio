@@ -1,43 +1,43 @@
-export const skillsObj: { name: string; path: string }[] = [
+export const skillsObj: SkillType[] = [
   {
     name: "HTML",
-    path: "/public/logos/HTML5_logo_and_wordmark.svg.png",
+    path: "/logos/HTML5_logo_and_wordmark.svg.png",
   },
   {
     name: "CSS",
-    path: "/public/logos/css3.png",
+    path: "/logos/css3.png",
   },
   {
     name: "JavaScript",
-    path: "/public/logos/js.png",
+    path: "/logos/js.png",
   },
   {
     name: "TypeScript",
-    path: "/public/logos/js.png",
+    path: "/logos/js.png",
   },
   {
     name: "ReactJS",
-    path: "/public/logos/React-icon.svg.png",
+    path: "/logos/React-icon.svg.png",
   },
   {
     name: "NextJS",
-    path: "/public/logos/Nextjs-logo.svg",
+    path: "/logos/Nextjs-logo.svg",
   },
   {
     name: "NodeJS",
-    path: "/public/logos/590px-Node.js_logo.svg.png",
+    path: "/logos/590px-Node.js_logo.svg.png",
   },
   {
     name: "NestJS",
-    path: "/public/logos/nestjs-small.svg",
+    path: "/logos/nestjs-small.svg",
   },
   {
     name: "Express",
-    path: "/public/logos/expressjs-icon.svg",
+    path: "/logos/expressjs-icon.svg",
   },
   {
     name: "MongoDB",
-    path: "/public/logos/mongodb.svg",
+    path: "/logos/mongodb.svg",
   },
   {
     name: "Sql",
@@ -49,22 +49,22 @@ export const skillsObj: { name: string; path: string }[] = [
   },
   {
     name: "Neo4j",
-    path: "/public/logos/neo4j-logo-2020-1.svg",
+    path: "/logos/neo4j-logo-2020-1.svg",
   },
   {
     name: "Redux",
-    path: "/public/logos/redux.svg",
+    path: "/logos/redux.svg",
   },
   {
     name: "Tailwind CSS",
-    path: "/public/logos/tailwindcss-icon.svg",
+    path: "/logos/tailwindcss-icon.svg",
   },
   {
     name: "Bootstrap",
-    path: "/public/logos/bootstarp.png",
+    path: "/logos/bootstarp.png",
   },
   {
     name: "Material UI",
-    path: "/public/logos/mui.png",
+    path: "/logos/mui.png",
   },
 ];

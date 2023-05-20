@@ -41,7 +41,7 @@ function Header({}: Props) {
               <Link href={"/"}>Accueil</Link>
             </li>
             <li>
-              <Link href={"/"}>Skills</Link>
+              <Link href={"#skills"}>Skills</Link>
             </li>
             <li>
               <Link href={"/"}>Portfolio</Link>

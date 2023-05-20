@@ -1,0 +1,22 @@
+.skill_wrap {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: auto;
+  overflow: hidden;
+  padding-top: 2rem;
+  scroll-margin: 70px;
+  scroll-behavior: smooth;
+}
+.skill_wrap .skill_title {
+  font-size: 2rem;
+  padding-bottom: 1rem;
+}
+.skill_wrap p{
+  padding-bottom: 1rem;
+}
+
+@media screen and (max-width: 930px) {
+  .skill_wrap {
+    padding: 2rem 1rem;
+  }
+}
