@@ -24,7 +24,7 @@
   /* flex: 3; */
 }
 .banner_hello {
-  font-size: 3vw;
+  font-size: 2vw;
   /* text-align: center; */
 }
 .banner_name {
@@ -52,7 +52,9 @@
 
 /* ====== MIDDLE ====== */
 .banner_middle {
-  /* text-align: center; */
+  color: gray;
+  font-size: 1.1rem;
+  font-weight: bold;
 }
 
 /* ============== banner_footer========== */

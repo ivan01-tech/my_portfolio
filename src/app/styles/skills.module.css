@@ -1,20 +1,38 @@
+
 .skill_wrap {
+  /* 
+  background: #1f2235;
+  color:  rgba(255, 197, 118, 0.9);
+  background: #f12711;  
+background: -webkit-linear-gradient(to right, #f5af19, #f12711); 
+background: linear-gradient(to right, #f5af19, #f12711); 
+  */
   width: 100%;
   max-width: var(--max-width);
   margin: auto;
-  overflow: hidden;
   padding-top: 2rem;
   scroll-margin: 70px;
   scroll-behavior: smooth;
 }
+.skills_item {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-gap: 1rem;
+  margin: 0 -1rem;
+  justify-items: center;
+}
+
 .skill_wrap .skill_title {
   font-size: 2rem;
   padding-bottom: 1rem;
 }
-.skill_wrap p{
+
+.skill_wrap p {
   padding-bottom: 1rem;
 }
+/*============= skills grid================ */
 
+/* =================== media queries ================== */
 @media screen and (max-width: 930px) {
   .skill_wrap {
     padding: 2rem 1rem;

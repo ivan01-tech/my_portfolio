@@ -3,28 +3,54 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 1rem;
-
   width: 130px;
   height: 170px;
   padding: 1rem;
-  border: 1px solid gray;
-  border-radius: 7px;
+  border-radius: 3px;
   font-weight: 700;
   gap: 2rem;
+  box-shadow: rgb(231, 231, 231) 0px 0px 0px 1px;
+  background-color: white;
+  transition: border-color 200ms ease-in-out 0s,
+    background-color 200ms ease-in-out 0s, box-shadow 200ms ease-in-out 0s,
+    margin-top 200ms ease-in-out 0s, margin-bottom 200ms ease-in-out 0s;
 }
-.skill_wrap::after {
-  content: "";
-  display: block;
-  width: 100%;
+
+.skill_wrap:hover {
+  border-color: transparent;
+  background-color: rgb(249, 249, 249);
+  box-shadow: rgb(191, 191, 191) 5px 5px 0px;
+  margin-top: -5px;
+  margin-bottom: 5px;
+}
+
+.skill_wrap::before {
+  content: " ";
   position: absolute;
-  height: 7px;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: royalblue;
-  border-radius: 7px 7px 0 0;
+  border-style: solid;
+  border-width: 5px;
+  border-color: transparent;
+  border-radius: 3px 3px 0px 0px;
+  width: 100%;
+  left: 0px;
+  right: 0px;
+  top: -1px;
+  transition: border-top 200ms ease-in-out 0s;
 }
+.skill_wrap:hover::before {
+  border-radius: 3px 3px 0px 0px;
+  border-color: rgb(255, 201, 81);
+  z-index: 1;
+}
+.skill_wrap:hover::after {
+  bottom: -5px;
+  content: " ";
+  height: 5px;
+  left: 0px;
+  position: absolute;
+  width: 100%;
+}
+
 .skill_content {
   align-self: flex-end;
   width: 100%;
@@ -36,14 +62,17 @@
   gap: 1rem;
   font-size: 1.1rem;
 }
-.skill_content .skill_head{
+.skill_content .skill_head {
   flex: 1;
 }
 
 .skill_content .skill_head image {
   object-fit: contain;
-  width: auto;
-  height: auto;
-  max-width: 70px;
-  max-height: 70px;
+}
+
+
+@media screen and (max-width:955px) {
+  .skill_wrap{
+    margin: 1rem;
+  }
 }

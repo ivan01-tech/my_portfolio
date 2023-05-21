@@ -5,7 +5,7 @@ export const skillsObj: SkillType[] = [
   },
   {
     name: "CSS",
-    path: "/logos/css3.png",
+    path: "/logos/new_CSS3_logo.svg.png",
   },
   {
     name: "JavaScript",
@@ -13,19 +13,19 @@ export const skillsObj: SkillType[] = [
   },
   {
     name: "TypeScript",
-    path: "/logos/js.png",
+    path: "/logos/new_Typescript_logo_2020.svg.png",
   },
   {
     name: "ReactJS",
-    path: "/logos/React-icon.svg.png",
+    path: "/logos/new_React-icon.svg.png",
   },
   {
     name: "NextJS",
-    path: "/logos/Nextjs-logo.svg",
+    path: "/logos/nextjs-2.svg",
   },
   {
     name: "NodeJS",
-    path: "/logos/590px-Node.js_logo.svg.png",
+    path: "/logos/new_nodejs-icon.svg",
   },
   {
     name: "NestJS",
@@ -41,11 +41,11 @@ export const skillsObj: SkillType[] = [
   },
   {
     name: "Sql",
-    path: "",
+    path: "/logos/new_489px-MySQL.svg.png",
   },
   {
     name: "Firebase",
-    path: "",
+    path: "/logos/new_firebase-icon.svg",
   },
   {
     name: "Neo4j",
@@ -61,7 +61,7 @@ export const skillsObj: SkillType[] = [
   },
   {
     name: "Bootstrap",
-    path: "/logos/bootstarp.png",
+    path: "/logos/new_Bootstrap_logo.svg.png",
   },
   {
     name: "Material UI",
