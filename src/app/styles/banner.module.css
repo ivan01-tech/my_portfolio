@@ -4,6 +4,7 @@
   background-color: var(--primary-bg-color);
   font-weight: bold;
   margin: auto;
+  text-align: center;
 }
 
 .banner_wrap {
@@ -17,7 +18,6 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
-
 }
 /* =============== banner header ================ */
 .banner_header {
@@ -38,15 +38,34 @@
   display: inline-block;
 }
 .text {
-  /* text-align: left; */
   font-size: 2rem;
-  height: auto;
-  width: 100%;
-  border-right: 2px solid;
+  display:inline-block;
+  border-right: 2px solid orange;
   white-space: nowrap;
   overflow: hidden;
   animation: typing 6s 1s steps(26) infinite,
     cursor 0.4s step-end alternate infinite;
+}
+.text_word{
+  --textgradient_color1: #ff4969;
+  --textgradient_color2: #fc9d44;
+  color: transparent;
+
+  background-clip: text;
+  background-image: linear-gradient(
+    75deg,
+    var(--textgradient_color1),
+    var(--textgradient_color2) 80%
+  );
+  background-size: cover;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+
+  
 }
 /* ========== end typping ====================== */
 
@@ -60,16 +79,16 @@
 /* ============== banner_footer========== */
 .banner_footer {
   display: flex;
-  flex-direction: column;
   align-items: center;
   gap: 2rem;
   justify-self: flex-end;
 }
-
+/* flex-direction: column; */
+/* justify-content: space-between; */
 .banner_hireme_section {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  gap: 1.5rem;
   align-items: center;
 }
 
@@ -77,8 +96,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
-
+  gap: 1.5rem;
 }
 /* ================ ANIMATION AND MEDIA QUERY ================== */
 /* animation for the typping effect */
@@ -116,5 +134,13 @@
   }
   .banner_name {
     font-size: 2.5rem;
+  }
+
+  .banner_footer {
+    flex-direction: column;
+  }
+  .banner_hireme_section {
+    justify-content: space-between;
+    gap: 0.5rem;
   }
 }

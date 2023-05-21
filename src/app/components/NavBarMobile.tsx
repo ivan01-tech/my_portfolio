@@ -1,10 +1,9 @@
 "use client";
-
 import Image from "next/image";
 import React, { useEffect, useRef } from "react";
 import ThemeBtn from "./ThemeBtn";
-import { BsFacebook, BsFillSunFill, BsGithub, BsLinkedin, BsTwitter } from "react-icons/bs";
-import { GrFacebook, GrFormClose, GrGithub, GrTwitter } from "react-icons/gr";
+import { BsFillSunFill, BsGithub, BsLinkedin, BsTwitter } from "react-icons/bs";
+import { GrFormClose } from "react-icons/gr";
 import Link from "next/link";
 import styles from "../styles/mobile.module.css";
 import { useMobile } from "@/app/Hooks/useMobile";
@@ -15,20 +14,22 @@ type Props = {};
 
 function NavBarMobile({}: Props): React.JSX.Element {
   const mobileWrapperRef = useRef<HTMLElement | null>(null);
-
   const { toggleMobileMenu, ShowMobileMenu } = useMobile()!;
-/**
- * the function to call went a link is clicked
- * @returns 
- */
-  const clickHandler = ()=>toggleMobileMenu(null)
-/* 
+
+  /**
+   * the function to call went a link is clicked
+   * @returns
+   */
+  const clickHandler = () => toggleMobileMenu(null);
+
   useEffect(() => {
-    if (!mobileWrapperRef?.current) return;
+    console.log("object");
+    if (
+      !(mobileWrapperRef.current && mobileWrapperRef.current.addEventListener)
+    )
+      return;
 
-    const closeMobileMenu = function (e: MouseEvent) {
-      e.stopPropagation();
-
+    const closeMobileMenu = function (e:Event) {
       toggleMobileMenu(null);
     };
 
@@ -37,10 +38,24 @@ function NavBarMobile({}: Props): React.JSX.Element {
     });
 
     return () => {
-      if (!mobileWrapperRef?.current) return;
+      if (
+        !(mobileWrapperRef.current && mobileWrapperRef.current.addEventListener)
+      )
+        return;
       mobileWrapperRef.current.removeEventListener("click", closeMobileMenu);
     };
-  }, []); */
+  }, [mobileWrapperRef]);
+
+  /**
+   *
+   * @param e
+   */
+  /* function onClickHnadler(e: Event) {
+    console.log("resized");
+    toggleMobileMenu(false);
+  }
+  // to togle the state of the mobile menu base on the window size
+  useEventListener("click", onClickHnadler, mobileWrapperRef); */
 
   return (
     <section
@@ -65,7 +80,9 @@ function NavBarMobile({}: Props): React.JSX.Element {
 
             <button
               className={styles.mobile_close_btn}
-              onClick={() => toggleMobileMenu(null)}
+              onClick={(e) => {
+                toggleMobileMenu(null);
+              }}
             >
               <GrFormClose />
             </button>

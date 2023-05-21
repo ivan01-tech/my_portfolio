@@ -13,16 +13,25 @@ function Banner({}: Props) {
     <section className={styles.banner} id="home">
       <section className={styles.banner_wrap}>
         <section className={styles.banner_header}>
-          <h1 className={styles.banner_hello}>Hi there, I'm</h1>
+          <h1 className={styles.banner_hello}>Hey, I'm</h1>
           {/* <h1 className={styles.banner_hello}>Hey , I'm</h1> */}
           <h1 className={styles.banner_name}>Silatsa Ivan</h1>
           <section className={styles.banner_description}>
-            <h3 className={styles.text}>A React Frontend Developer </h3>
+            <h3 className={styles.text}>
+              {/* <span className={styles.text_word}>A</span>{" "}
+              <span className={styles.text_word}>React</span>{" "}
+              <span className={styles.text_word}>Frontend</span>{" "}
+              <span className={styles.text_word}>Developer</span> */}
+              <span className={styles.text_word}>A</span>{" "}
+              <span className={styles.text_word}>NodeJS</span>{" "}
+              <span className={styles.text_word}>Backend</span>{" "}
+              <span className={styles.text_word}>Developer</span>
+            </h3>
           </section>
         </section>
 
         <section className={styles.banner_middle}>
-          I like to build , test, and deploy web apps using JavaScript
+          I like to develop , test, and deploy web apps using JavaScript
           technologies.
         </section>
 

@@ -16,7 +16,7 @@ function Skills({ }: Props) {
       
       <div className={styles.skills_item}>
         {
-          skillsObj.map((elt,ind)=> <SkillsItem key={(elt.name+ind)} skill={elt}  /> ).slice(0,8)
+          skillsObj.map((elt,ind)=> <SkillsItem key={(elt.name+ind)} skill={elt}  /> )
         }
       </div>
     </section>

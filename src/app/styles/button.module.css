@@ -1,8 +1,11 @@
 .btn {
   outline: none;
-  border: var(--border-btn-width) solid var(--secondary-color);
+  border: var(--border-btn-width) solid rgb(218, 49, 86);
   border-radius: 2rem;
-  padding: 0.2rem 1rem;
+  padding: 0.3rem 1rem;
   cursor: pointer;
-  font-weight: bold;
+  font-weight: 700;
+  /* color:white; */
+
+  /* background: -webkit-linear-gradient(30deg, #f5af19, #f12711,  #ffc576e6);  */
 }
