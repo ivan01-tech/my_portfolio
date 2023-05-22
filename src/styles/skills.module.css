@@ -1,6 +1,4 @@
-
 .skill_wrap {
-  /* background: #1f2235; */
   width: 100%;
   max-width: var(--max-width);
   margin: auto;
@@ -13,26 +11,34 @@
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   grid-gap: 1rem;
   margin: 0 -1rem;
-  justify-items: center;
   align-items: center;
-  /* grid-row-gap: 1rem; */
-  grid-column-gap: 1rem;
+  gap: 2rem;
+  align-content: center;
 }
 
 .skill_wrap .skill_title {
   font-size: 2rem;
-  padding-bottom: .5rem;
+  padding-bottom: 0.5rem;
 }
 
 .skill_wrap p {
   padding-bottom: 1rem;
   margin-bottom: 1rem;
 }
-/*============= skills grid================ */
+
+.view_all_sec {
+  margin: 1rem 0rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
 
 /* =================== media queries ================== */
 @media screen and (max-width: 930px) {
   .skill_wrap {
-    padding: 2rem 1rem;
+    padding: 0rem 1.5rem;
+  }
+  .skills_item {
+    margin: 1rem 3rem;
   }
 }

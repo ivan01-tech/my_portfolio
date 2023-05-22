@@ -6,9 +6,9 @@ import { BsFillSunFill, BsGithub, BsLinkedin, BsTwitter } from "react-icons/bs";
 import { GrFormClose } from "react-icons/gr";
 import Link from "next/link";
 import styles from "../styles/mobile.module.css";
-import { useMobile } from "@/app/Hooks/useMobile";
 import Button from "./Button";
 import { FollowMeBtn } from "./FollowMeBtn";
+import { useMobile } from "@/Hooks/useMobile";
 
 type Props = {};
 

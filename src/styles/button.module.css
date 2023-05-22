@@ -5,7 +5,12 @@
   padding: 0.3rem 1rem;
   cursor: pointer;
   font-weight: 700;
-  /* color:white; */
+  color:#da3156;
 
   /* background: -webkit-linear-gradient(30deg, #f5af19, #f12711,  #ffc576e6);  */
+}
+
+.fill{
+  color: white;
+  background-color: #da3156;
 }

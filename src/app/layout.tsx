@@ -1,13 +1,14 @@
-"use cleint";
-
 import "./globals.css";
-import Header from "./components/Header";
-import Banner from "@/app/components/Banner";
-import NavBarMobile from "./components/NavBarMobile";
-import { MobileMenuPovider } from "./Context/MobileMenu";
-import Skills from './components/Skills';
+import { MobileMenuPovider } from "@/Context/MobileMenu";
+import { ModalProvider } from "@/Context/ModalContext";
+import Banner from "@/components/Banner";
+import Header from "@/components/Header";
+import NavBarMobile from "@/components/NavBarMobile";
+import Skills from "@/components/Skills";
+import { Metadata } from "next";
+import ShowSkillsModal from '../components/ShowSkillsModal';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Ivan01-tech | Portfolio",
   description: "Created by Ivan Silatsa",
 };
@@ -20,13 +21,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <MobileMenuPovider>
-          <Header />
-          <NavBarMobile />
-          <Banner />
-          <Skills  />
-          {children}
-        </MobileMenuPovider>
+        <ModalProvider>
+          <MobileMenuPovider>
+            <Header />
+            <NavBarMobile />
+            <ShowSkillsModal />
+            <main>
+              <Banner />
+              <Skills />
+              {children}
+            </main>
+          </MobileMenuPovider>
+        </ModalProvider>
       </body>
     </html>
   );

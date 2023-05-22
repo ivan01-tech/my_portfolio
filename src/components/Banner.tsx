@@ -41,7 +41,7 @@ function Banner({}: Props) {
               <Button>Download My CV</Button>
             </Link>
             <Link href={"/"}>
-              <Button>Hire Me</Button>
+              <Button fill>Hire Me</Button>
             </Link>
           </section>
 
