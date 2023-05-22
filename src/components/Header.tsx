@@ -38,7 +38,7 @@ function Header({}: Props) {
         <nav aria-label="menu-full-screen" className={styles.navbar}>
           <ul className={styles.navbar_list}>
             <li>
-              <Link href={"/"}>Accueil</Link>
+              <Link href={"#home_banner"}>Accueil</Link>
             </li>
             <li>
               <Link href={"#skills"}>Skills</Link>

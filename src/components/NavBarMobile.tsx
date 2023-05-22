@@ -4,11 +4,11 @@ import React, { useEffect, useRef } from "react";
 import ThemeBtn from "./ThemeBtn";
 import { BsFillSunFill, BsGithub, BsLinkedin, BsTwitter } from "react-icons/bs";
 import { GrFormClose } from "react-icons/gr";
-import Link from "next/link";
 import styles from "../styles/mobile.module.css";
-import Button from "./Button";
 import { FollowMeBtn } from "./FollowMeBtn";
 import { useMobile } from "@/Hooks/useMobile";
+import DownloaMyCV from "./DownloaMyCV";
+import HireMe from "./HireMe";
 
 type Props = {};
 
@@ -17,19 +17,28 @@ function NavBarMobile({}: Props): React.JSX.Element {
   const { toggleMobileMenu, ShowMobileMenu } = useMobile()!;
 
   /**
+   * this helps me to apply the scroll behavoir
    * the function to call went a link is clicked
    * @returns
    */
-  const clickHandler = () => toggleMobileMenu(null);
+  const clickHandler = (id: string) => {
+    const doc = document.getElementById(id);
+
+    if (!doc) {
+      return;
+    }
+
+    doc.scrollIntoView({ behavior: "smooth" });
+    toggleMobileMenu(false);
+  };
 
   useEffect(() => {
-    console.log("object");
     if (
       !(mobileWrapperRef.current && mobileWrapperRef.current.addEventListener)
     )
       return;
 
-    const closeMobileMenu = function (e:Event) {
+    const closeMobileMenu = function (e: Event) {
       toggleMobileMenu(null);
     };
 
@@ -91,26 +100,38 @@ function NavBarMobile({}: Props): React.JSX.Element {
 
         <nav className={styles.mobile_nav}>
           <ul>
-            <Link href={"/"} onClick={clickHandler}>
-              <li>Accueil</li>
-            </Link>
-            <Link href={"#skills"} onClick={clickHandler}>
-              <li>Skills</li>
-            </Link>
-            <Link href={"/"} onClick={clickHandler}>
-              <li>Portfolio</li>
-            </Link>
+            <li>
+              <button
+                className={styles.link_btn}
+                onClick={() => clickHandler("home_banner")}
+              >
+                Accueil
+              </button>
+            </li>
+            <li>
+              <button
+                className={styles.link_btn}
+                onClick={() => clickHandler("skills")}
+              >
+                Skills
+              </button>
+            </li>
+            <li>
+              <button
+                className={styles.link_btn}
+                onClick={() => clickHandler("portfolio")}
+              >
+                Portfolio
+              </button>
+            </li>
           </ul>
         </nav>
 
         <div className={styles.nav_btn}>
-          <Link href={"/"}>
-            <Button>Download My CV</Button>
-          </Link>
-          <Link href={"/"}>
-            <Button>Hire Me</Button>
-          </Link>
+          <DownloaMyCV />
+          <HireMe />
         </div>
+
         <section className={styles.follow_btn}>
           <FollowMeBtn link={"/"}>
             <BsGithub />

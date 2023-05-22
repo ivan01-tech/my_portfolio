@@ -24,6 +24,7 @@ html{
 
 body{
   position: relative;
+  scroll-behavior: smooth
 }
 
 a {

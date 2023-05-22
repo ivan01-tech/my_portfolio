@@ -5,12 +5,14 @@ import Link from "next/link";
 import { FollowMeBtn } from "./FollowMeBtn";
 import { BsGithub, BsTwitter } from "react-icons/bs";
 import { GrLinkedin } from "react-icons/gr";
+import DownloaMyCV from "./DownloaMyCV";
+import HireMe from "./HireMe";
 
 type Props = {};
 
 function Banner({}: Props) {
   return (
-    <section className={styles.banner} id="home">
+    <section className={styles.banner} id="home_banner">
       <section className={styles.banner_wrap}>
         <section className={styles.banner_header}>
           <h1 className={styles.banner_hello}>Hey, I'm</h1>
@@ -37,12 +39,8 @@ function Banner({}: Props) {
 
         <section className={styles.banner_footer}>
           <section className={styles.banner_hireme_section}>
-            <Link href={"/media/ivan01-tech_cv-min.pdf"}>
-              <Button>Download My CV</Button>
-            </Link>
-            <Link href={"/"}>
-              <Button fill>Hire Me</Button>
-            </Link>
+          <DownloaMyCV />
+          <HireMe />
           </section>
 
           <section className={styles.follow_btns}>
