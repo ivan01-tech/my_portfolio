@@ -1,11 +1,12 @@
 "use client";
-
+import { FaArrowRight, FaLine, FaLink } from "react-icons/fa";
 import React from "react";
 import { skillsObj } from "../utils/skillsObj";
 import SkillsItem from "./SkillsItem";
 import styles from "../styles/skills.module.css";
 import Button from "./Button";
 import { useModal } from "@/Hooks/useModal";
+import { BsArrowRight } from "react-icons/bs";
 
 type Props = {};
 
@@ -34,7 +35,8 @@ function Skills({}: Props) {
             toggleModal(true);
           }}
         >
-          View All
+          <span>See More </span>
+          <BsArrowRight className={styles.arrLeft} />
         </Button>
       </div>
     </section>

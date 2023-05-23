@@ -2,7 +2,7 @@ import React from "react";
 import styles from "../styles/banner.module.css";
 import { FollowMeBtn } from "./FollowMeBtn";
 import { BsGithub, BsTwitter } from "react-icons/bs";
-import { GrLinkedin } from "react-icons/gr";
+import { GrLinkedin, GrLinkedinOption } from "react-icons/gr";
 import DownloaMyCV from "./DownloaMyCV";
 import HireMe from "./HireMe";
 
@@ -53,7 +53,7 @@ function Banner({}: Props) {
             </FollowMeBtn>
 
             <FollowMeBtn link={"/"}>
-              <GrLinkedin />
+              <GrLinkedinOption />
             </FollowMeBtn>
           </section>
         </section>

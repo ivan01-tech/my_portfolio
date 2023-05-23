@@ -23,13 +23,15 @@ html{
 }
 
 body{
-  position: relative;
-  scroll-behavior: smooth
 }
 
 a {
   color: inherit;
   text-decoration: none;
+}
+/* color for the current active link */
+.mobile_active , .full_active{
+  color: royalblue;
 }
 
 /* :root {

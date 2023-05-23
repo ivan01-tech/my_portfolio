@@ -1,9 +1,9 @@
 "use client";
-
+import {ImLinkedin2} from "react-icons/im"
 import Image from "next/image";
 import React, { useEffect, useRef } from "react";
 import ThemeBtn from "./ThemeBtn";
-import { BsFillSunFill, BsGithub, BsLinkedin, BsTwitter } from "react-icons/bs";
+import { BsFillSunFill, BsGithub, BsTwitter } from "react-icons/bs";
 import { GrFormClose } from "react-icons/gr";
 import styles from "../styles/mobile.module.css";
 import { FollowMeBtn } from "./FollowMeBtn";
@@ -54,9 +54,8 @@ function NavBarMobile({}: Props): React.JSX.Element {
 
   return (
     <section
-      className={`${ShowMobileMenu ? styles["show_mobile_menu"] : ""} ${
-        styles.mobile_wrap
-      }`}
+      className={`${ShowMobileMenu ? styles["show_mobile_menu"] : ""} 
+      ${styles.mobile_wrap}`}
       ref={mobileWrapperRef}
     >
       <section className={styles.mobile_container}>
@@ -120,7 +119,7 @@ function NavBarMobile({}: Props): React.JSX.Element {
           </FollowMeBtn>
 
           <FollowMeBtn link={"/"}>
-            <BsLinkedin />
+            <ImLinkedin2 />
           </FollowMeBtn>
         </section>
       </section>

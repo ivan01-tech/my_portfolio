@@ -7,7 +7,10 @@
   font-weight: 700;
   color:#da3156;
 
-  /* background: -webkit-linear-gradient(30deg, #f5af19, #f12711,  #ffc576e6);  */
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:.5rem;
 }
 
 .fill{

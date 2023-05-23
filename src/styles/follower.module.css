@@ -6,14 +6,11 @@
   align-items: center;
   font-weight: bold;
   border-radius: 50%;
-  font-size: 1.7rem;
-  /* color: var(--primary-bg-color); */
+  font-size: 1.4rem;
   color: hsl(235, 100%, 72%);
-  /* background-color: hsl(235, 100%, 72%); */
   border: 2px solid hsl(235, 100%, 72%);
 }
 .follower_wrap:hover {
   color: hsl(235, 100%, 78%);
-  /* background-color: white; */
   border-color: hsl(235, 100%, 78%);
 }

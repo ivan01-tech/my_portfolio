@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useCallback, useEffect, useRef } from "react";
 import styles from "../styles/navbtn.module.css";
 import { useMobile } from "@/Hooks/useMobile";
-type Props = { children: React.ReactNode; linkId: string,shouldCallToggle?:boolean };
+import { classActive } from "@/utils/className";
 
-function NavBtn({ children, linkId,shouldCallToggle }: Props) {
+type Props = {
+  children: React.ReactNode;
+  linkId: string;
+  shouldCallToggle?: boolean;
+};
+
+function NavBtn({ children, linkId, shouldCallToggle }: Props) {
+  const btnRef = useRef<HTMLButtonElement | null>(null);
+
   const { toggleMobileMenu } = useMobile()!;
 
   /**
@@ -12,17 +20,34 @@ function NavBtn({ children, linkId,shouldCallToggle }: Props) {
    * @returns
    */
   const clickHandler = () => {
-    shouldCallToggle && toggleMobileMenu(false);
+
+    const currentClass = shouldCallToggle
+      ? classActive.mobileClass
+      : classActive.fullClass;
+
+    const isActive = document.querySelector(`.${currentClass}`);
 
     const doc = document.getElementById(linkId);
 
+    shouldCallToggle && toggleMobileMenu(false);
+
+    console.log(currentClass, isActive, doc);
+
     if (!doc) return;
-    
+
+    // we add the current class on the 
+    if(btnRef.current){
+      // remove the current class only id we found the target
+      if (isActive) isActive.classList.remove(currentClass);
+
+      btnRef.current.classList.add(currentClass)
+    }
+
     doc.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
-    <button className={styles.link_btn} onClick={clickHandler}>
+    <button ref={btnRef} className={styles.link_btn} onClick={clickHandler}>
       {children}
     </button>
   );

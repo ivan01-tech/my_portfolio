@@ -3,8 +3,9 @@
   max-width: var(--max-width);
   margin: auto;
   padding-top: 2rem;
-  scroll-margin: 70px;
-  scroll-behavior: smooth;
+
+  /* scroll-margin-top: 50px; */
+  /* scroll-behavior: smooth; */
 }
 .skills_item {
   display: flex;
@@ -15,7 +16,7 @@
 
 .skill_wrap .skill_title {
   font-size: 2rem;
-  padding-bottom: 0.5rem;
+  padding: 2rem 0 1rem 0;
 }
 
 .skill_wrap p {
@@ -28,6 +29,12 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
+}
+
+/* to style to arrow rigth  on the button */
+.arrLeft{
+  font-size:1.2rem;
+  font-weight: 700;
 }
 
 /* =================== media queries ================== */
