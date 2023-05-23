@@ -7,11 +7,11 @@ import Button from "./Button";
 import styles from "../styles/header.module.css";
 import ThemeBtn from "./ThemeBtn";
 import { useMobile } from "../Hooks/useMobile";
+import NavBtn from "./NavBtn";
 
 type Props = {};
 
 function Header({}: Props) {
-  
   const { toggleMobileMenu } = useMobile()!;
 
   return (
@@ -38,13 +38,13 @@ function Header({}: Props) {
         <nav aria-label="menu-full-screen" className={styles.navbar}>
           <ul className={styles.navbar_list}>
             <li>
-              <Link href={"#home_banner"}>Accueil</Link>
+              <NavBtn linkId={"home_banner"}>Accueil</NavBtn>
             </li>
             <li>
-              <Link href={"#skills"}>Skills</Link>
+              <NavBtn linkId={"skills"}>Skills</NavBtn>
             </li>
             <li>
-              <Link href={"/"}>Portfolio</Link>
+              <NavBtn linkId=""> Portfolio</NavBtn>
             </li>
           </ul>
 

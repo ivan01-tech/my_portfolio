@@ -19,9 +19,9 @@ export const MobileMenuPovider = ({ children }: Props) => {
   const toggleMobileMenu = function (arg: boolean | null = null) {
     console.log(ShowMobileMenu);
     if (arg && typeof arg == "boolean") {
-      return setShowMobileMenu(arg);
+       setShowMobileMenu(arg);
     } else {
-      return setShowMobileMenu((prev) => !prev);
+       setShowMobileMenu((prev) => !prev);
     }
     
   };

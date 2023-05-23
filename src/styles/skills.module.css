@@ -7,13 +7,10 @@
   scroll-behavior: smooth;
 }
 .skills_item {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  grid-gap: 1rem;
-  margin: 0 -1rem;
-  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 2rem;
-  align-content: center;
 }
 
 .skill_wrap .skill_title {

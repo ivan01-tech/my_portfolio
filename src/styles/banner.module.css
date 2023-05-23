@@ -29,20 +29,19 @@
   /* flex: 3; */
 }
 .banner_hello {
-  font-size: 2vw;
+  font-size: 3.5vw;
   /* text-align: center; */
 }
 .banner_name {
-  font-size: 4vw;
-  /* text-align: center; */
-
+  font-size: 4.5vw;
   color: royalblue;
 }
 /* =================== TYPPING EFFECT STYLES =============== */
 .banner_description {
-  display: inline-block;
+  display:inline-block;
 }
 .text {
+  word-wrap: break-word;
   margin-top: .5rem;
   font-size: 2rem;
   display:inline-block;
@@ -148,4 +147,9 @@
     justify-content: space-between;
     gap: 0.5rem;
   }
+
+  .text {
+    font-size: 1.5rem;
+  }
+
 }

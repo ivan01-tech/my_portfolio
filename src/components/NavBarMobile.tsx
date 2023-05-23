@@ -1,4 +1,5 @@
 "use client";
+
 import Image from "next/image";
 import React, { useEffect, useRef } from "react";
 import ThemeBtn from "./ThemeBtn";
@@ -9,6 +10,7 @@ import { FollowMeBtn } from "./FollowMeBtn";
 import { useMobile } from "@/Hooks/useMobile";
 import DownloaMyCV from "./DownloaMyCV";
 import HireMe from "./HireMe";
+import NavBtn from "./NavBtn";
 
 type Props = {};
 
@@ -16,35 +18,19 @@ function NavBarMobile({}: Props): React.JSX.Element {
   const mobileWrapperRef = useRef<HTMLElement | null>(null);
   const { toggleMobileMenu, ShowMobileMenu } = useMobile()!;
 
-  /**
-   * this helps me to apply the scroll behavoir
-   * the function to call went a link is clicked
-   * @returns
-   */
-  const clickHandler = (id: string) => {
-    const doc = document.getElementById(id);
-
-    if (!doc) {
-      return;
-    }
-
-    doc.scrollIntoView({ behavior: "smooth" });
-    toggleMobileMenu(false);
-  };
-
-  useEffect(() => {
+  /* useEffect(() => {
     if (
       !(mobileWrapperRef.current && mobileWrapperRef.current.addEventListener)
     )
       return;
 
     const closeMobileMenu = function (e: Event) {
-      toggleMobileMenu(null);
+      e.preventDefault()
+      e.stopPropagation();
+      toggleMobileMenu(false);
     };
 
-    mobileWrapperRef.current.addEventListener("click", function (e) {
-      return toggleMobileMenu(false);
-    });
+    mobileWrapperRef.current.addEventListener("click", closeMobileMenu);
 
     return () => {
       if (
@@ -53,7 +39,7 @@ function NavBarMobile({}: Props): React.JSX.Element {
         return;
       mobileWrapperRef.current.removeEventListener("click", closeMobileMenu);
     };
-  }, [mobileWrapperRef]);
+  }, [mobileWrapperRef]); */
 
   /**
    *
@@ -90,7 +76,8 @@ function NavBarMobile({}: Props): React.JSX.Element {
             <button
               className={styles.mobile_close_btn}
               onClick={(e) => {
-                toggleMobileMenu(null);
+                // e.stopPropagation();
+                toggleMobileMenu(false);
               }}
             >
               <GrFormClose />
@@ -101,28 +88,19 @@ function NavBarMobile({}: Props): React.JSX.Element {
         <nav className={styles.mobile_nav}>
           <ul>
             <li>
-              <button
-                className={styles.link_btn}
-                onClick={() => clickHandler("home_banner")}
-              >
+              <NavBtn shouldCallToggle linkId="home_banner">
                 Accueil
-              </button>
+              </NavBtn>
             </li>
             <li>
-              <button
-                className={styles.link_btn}
-                onClick={() => clickHandler("skills")}
-              >
+              <NavBtn shouldCallToggle linkId="skills">
                 Skills
-              </button>
+              </NavBtn>
             </li>
             <li>
-              <button
-                className={styles.link_btn}
-                onClick={() => clickHandler("portfolio")}
-              >
+              <NavBtn shouldCallToggle linkId="portfolio">
                 Portfolio
-              </button>
+              </NavBtn>
             </li>
           </ul>
         </nav>
