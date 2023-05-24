@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useRef } from "react";
 import styles from "../styles/navbtn.module.css";
 import { useMobile } from "@/Hooks/useMobile";
-import { classActive } from "@/utils/className";
+import { classActive } from "@/utils/constant";
 
 type Props = {
   children: React.ReactNode;

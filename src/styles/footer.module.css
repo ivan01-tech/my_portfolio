@@ -1,0 +1,33 @@
+.footer{
+  margin-top:2rem;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background-color: rgb(83, 87, 135);
+  font-weight: bolder;
+  padding: 1rem 0rem;
+  color:white;
+}
+.footer_content{
+  width: 100%;
+  max-width:56rem;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.follow_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+
+@media screen and (max-width:900px) {
+  
+  .footer_content{
+    padding:0rem .5rem ;
+
+  }
+}

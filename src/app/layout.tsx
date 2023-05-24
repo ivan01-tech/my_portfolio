@@ -7,6 +7,7 @@ import NavBarMobile from "@/components/NavBarMobile";
 import Skills from "@/components/Skills";
 import { Metadata } from "next";
 import ShowSkillsModal from '../components/ShowSkillsModal';
+import Footer from '../components/Footer';
 
 export const metadata: Metadata = {
   title: "Ivan01-tech | Portfolio",
@@ -33,6 +34,7 @@ export default function RootLayout({
             </main>
           </MobileMenuPovider>
         </ModalProvider>
+        <Footer />
       </body>
     </html>
   );

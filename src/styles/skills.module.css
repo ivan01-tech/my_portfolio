@@ -4,8 +4,7 @@
   margin: auto;
   padding-top: 2rem;
 
-  /* scroll-margin-top: 50px; */
-  /* scroll-behavior: smooth; */
+  scroll-margin-top: -100px;
 }
 .skills_item {
   display: flex;
@@ -40,9 +39,9 @@
 /* =================== media queries ================== */
 @media screen and (max-width: 930px) {
   .skill_wrap {
-    padding: 0rem 1.5rem;
+    padding: 0rem 1rem;
   }
   .skills_item {
-    margin: 1rem 3rem;
+    margin: 1rem 1rem;
   }
 }

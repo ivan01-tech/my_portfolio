@@ -5,11 +5,11 @@ import { BsGithub, BsTwitter } from "react-icons/bs";
 import { GrLinkedin, GrLinkedinOption } from "react-icons/gr";
 import DownloaMyCV from "./DownloaMyCV";
 import HireMe from "./HireMe";
+import { socialNetworkLink } from "@/utils/constant";
 
 type Props = {};
 
 function Banner({}: Props) {
-
   return (
     <section className={styles.banner} id="home_banner">
       <section className={styles.banner_wrap}>
@@ -44,15 +44,15 @@ function Banner({}: Props) {
           </section>
 
           <section className={styles.follow_btns}>
-            <FollowMeBtn link={"/"}>
+            <FollowMeBtn link={socialNetworkLink.github}>
               <BsGithub />
             </FollowMeBtn>
 
-            <FollowMeBtn link={"/"}>
+            <FollowMeBtn link={socialNetworkLink.twitter}>
               <BsTwitter />
             </FollowMeBtn>
 
-            <FollowMeBtn link={"/"}>
+            <FollowMeBtn link={socialNetworkLink.linked}>
               <GrLinkedinOption />
             </FollowMeBtn>
           </section>

@@ -11,6 +11,7 @@ import { useMobile } from "@/Hooks/useMobile";
 import DownloaMyCV from "./DownloaMyCV";
 import HireMe from "./HireMe";
 import NavBtn from "./NavBtn";
+import { socialNetworkLink } from "@/utils/constant";
 
 type Props = {};
 
@@ -110,15 +111,15 @@ function NavBarMobile({}: Props): React.JSX.Element {
         </div>
 
         <section className={styles.follow_btn}>
-          <FollowMeBtn link={"/"}>
+          <FollowMeBtn link={socialNetworkLink.github}>
             <BsGithub />
           </FollowMeBtn>
 
-          <FollowMeBtn link={"/"}>
+          <FollowMeBtn link={socialNetworkLink.twitter}>
             <BsTwitter />
           </FollowMeBtn>
 
-          <FollowMeBtn link={"/"}>
+          <FollowMeBtn link={socialNetworkLink.linked}>
             <ImLinkedin2 />
           </FollowMeBtn>
         </section>

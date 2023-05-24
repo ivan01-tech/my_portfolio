@@ -1,7 +1,7 @@
 export const skillsObj: SkillType[] = [
   {
     name: "HTML",
-    path: "/logos/HTML5_logo_and_wordmark.svg.png",
+    path: "/logos/html_logo.png",
   },
   {
     name: "CSS",
@@ -17,7 +17,7 @@ export const skillsObj: SkillType[] = [
   },
   {
     name: "ReactJS",
-    path: "/logos/new_React-icon.svg.png",
+    path: "/logos/react.png",
   },
   {
     name: "NextJS",
@@ -33,7 +33,7 @@ export const skillsObj: SkillType[] = [
   },
   {
     name: "Express",
-    path: "/logos/expressjs-icon.svg",
+    path: "/logos/expressjs.png",
   },
   {
     name: "MongoDB",
@@ -44,8 +44,12 @@ export const skillsObj: SkillType[] = [
     path: "/logos/new_489px-MySQL.svg.png",
   },
   {
+    name: "Git",
+    path: "/logos/Git-Icon-1788C.png",
+  },
+  {
     name: "Firebase",
-    path: "/logos/new_firebase-icon.svg",
+    path: "/logos/fireabse_icon.webp",
   },
   {
     name: "Neo4j",
@@ -56,11 +60,12 @@ export const skillsObj: SkillType[] = [
     path: "/logos/redux.svg",
   },
   {
-    name:"Docker",path:"/logos/docker-svgrepo-com.svg"
+    name: "Docker",
+    path: "/logos/docker.webp"
   },
   {
     name: "Tailwind",
-    path: "/logos/tailwindcss-icon.svg",
+    path: "/logos/tailwind_css.png",
   },
   {
     name: "Bootstrap",
@@ -68,6 +73,6 @@ export const skillsObj: SkillType[] = [
   },
   {
     name: "Material UI",
-    path: "/logos/mui.png",
+    path: "/logos/mui_icon.png",
   },
 ];
