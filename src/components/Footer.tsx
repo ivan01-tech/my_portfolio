@@ -4,6 +4,7 @@ import { BsGithub, BsTwitter } from "react-icons/bs";
 import { socialNetworkLink } from "@/utils/constant";
 import { ImLinkedin2 } from "react-icons/im";
 import styles from "../styles/footer.module.css";
+
 type Props = {};
 
 function Footer({}: Props) {
@@ -11,7 +12,7 @@ function Footer({}: Props) {
     <footer className={styles.footer}>
       <section className={styles.footer_content}>
         <section>
-          <p>Ivan01-tech © Copyright</p>
+          <p>Ivan01-tech &copy; Copyright 2023</p>
         </section>
         <section className={styles.follow_btn}>
           <FollowMeBtn link={socialNetworkLink.github}>

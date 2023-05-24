@@ -1,3 +1,4 @@
+export const animationTime:number = 6000
 
 export const socialNetworkLink = {
   twitter:"https://twitter.com/ivansilatsa",

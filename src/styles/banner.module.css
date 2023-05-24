@@ -35,36 +35,6 @@
 .banner_description {
   display:inline-block;
 }
-.text {
-  word-wrap: break-word;
-  margin-top: .5rem;
-  font-size: 2rem;
-  display:inline-block;
-  border-right: 2px solid orange;
-  white-space: nowrap;
-  overflow: hidden;
-  animation: typing 6s 1s steps(26) infinite,
-    cursor 0.4s step-end alternate infinite;
-}
-.text_word{
-  --textgradient_color1: #ff4969;
-  --textgradient_color2: #fc9d44;
-  color: transparent;
-
-  background-clip: text;
-  background-image: linear-gradient(
-    75deg,
-    var(--textgradient_color2),
-    var(--textgradient_color1) 80%
-  );
-  background-size: cover;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
-}
 /* ========== end typping ====================== */
 
 /* ====== MIDDLE ====== */
@@ -96,27 +66,6 @@
   gap: 1.5rem;
 }
 /* ================ ANIMATION AND MEDIA QUERY ================== */
-/* animation for the typping effect */
-
-@keyframes cursor {
-  50% {
-    border-color: transparent;
-  }
-}
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  40%,
-  85% {
-    width: 100%;
-  }
-  90%,
-  100% {
-    width: 0;
-  }
-}
-/* end animation for the typping effect */
 
 /* ================MEDIA QUERY================ */
 @media screen and (max-width: 470px) {
