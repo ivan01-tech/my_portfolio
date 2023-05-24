@@ -23,7 +23,6 @@ function Banner({}: Props) {
     if (!descriptionRef.current) return;
 
     let num = round%3
-    console.log(num,round)
 
     descriptionRef.current.innerHTML = num===0
       ? `

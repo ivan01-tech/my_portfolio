@@ -1,5 +1,5 @@
 "use client";
-import {ImLinkedin2} from "react-icons/im"
+import { ImLinkedin2 } from "react-icons/im";
 import Image from "next/image";
 import React, { useEffect, useRef } from "react";
 import ThemeBtn from "./ThemeBtn";
@@ -12,11 +12,13 @@ import DownloaMyCV from "./DownloaMyCV";
 import HireMe from "./HireMe";
 import NavBtn from "./NavBtn";
 import { socialNetworkLink } from "@/utils/constant";
+import debounce from "@/utils/debounce";
 
 type Props = {};
 
 function NavBarMobile({}: Props): React.JSX.Element {
   const mobileWrapperRef = useRef<HTMLElement | null>(null);
+
   const { toggleMobileMenu, ShowMobileMenu } = useMobile()!;
 
   /* useEffect(() => {
@@ -42,16 +44,27 @@ function NavBarMobile({}: Props): React.JSX.Element {
     };
   }, [mobileWrapperRef]); */
 
-  /**
-   *
-   * @param e
-   */
-  /* function onClickHnadler(e: Event) {
+  /* function onResizeHandler(e: Event) {
     console.log("resized");
     toggleMobileMenu(false);
-  }
-  // to togle the state of the mobile menu base on the window size
-  useEventListener("click", onClickHnadler, mobileWrapperRef); */
+  }*/
+
+  /**
+   *  to close the navbar mobile when the size is more than the default one
+   */
+  useEffect(() => {
+    const resizeHandlerDebounced = debounce(() => {
+      if (window.innerWidth >= 690 && ShowMobileMenu) {
+        return toggleMobileMenu(false);
+      }
+    }, 200);
+
+    window.addEventListener("resize", resizeHandlerDebounced);
+
+    return () => {
+      window.removeEventListener("resize", resizeHandlerDebounced);
+    };
+  }, []);
 
   return (
     <section

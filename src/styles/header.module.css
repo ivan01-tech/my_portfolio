@@ -54,12 +54,13 @@
   display: none;
 }
 
-@media screen and (max-width: 690px) {
+@media screen and (max-width: 689px) {
   .header {
     padding: 0.5rem 2rem;
   }
   .header_hamburger {
     display: block;
+    
     font-size: 2rem;
     padding: 0;
     margin: 0;

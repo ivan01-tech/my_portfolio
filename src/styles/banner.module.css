@@ -95,3 +95,12 @@
   }
 
 }
+
+@media screen and (max-width:56rem) {
+  .banner_hello {
+    font-size: 2rem;
+  }
+  .banner_name {
+    font-size: 2.5rem;
+  }  
+}

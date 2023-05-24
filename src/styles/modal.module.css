@@ -35,6 +35,7 @@
   align-items: center;
   font-size: 1.7rem;
   font-weight: bold;
+  opacity: .8;
 }
 
 .modal_head >:nth-child(2){

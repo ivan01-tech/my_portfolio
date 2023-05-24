@@ -1,4 +1,5 @@
 "use client";
+
 import { BsFillSunFill } from "react-icons/bs";
 import Image from "next/image";
 import Link from "next/link";
@@ -49,9 +50,9 @@ function Header({}: Props) {
           </ul>
 
           <div className={styles.navbar_btn}>
-            <Link href={"/"}>
-              <Button>Contact Me</Button>
-            </Link>
+
+            <Button>Contact Me</Button>
+            
             <ThemeBtn>
               <BsFillSunFill />
             </ThemeBtn>
