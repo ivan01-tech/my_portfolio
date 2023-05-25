@@ -23,11 +23,16 @@
   gap: 1.5rem;
 }
 
+@media screen and (max-width:450px) { 
+  .footer_content{
+ flex-direction:column;
+ gap:1.5rem;
+  }
+}
 
-@media screen and (max-width:900px) {
-  
+@media screen and (max-width:900px) { 
   .footer_content{
     padding:0rem .5rem ;
-
+    
   }
 }

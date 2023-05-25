@@ -50,6 +50,9 @@
   box-shadow: rgb(231, 231, 231) 0px 0px 0px 2px;
   background-color: white;
 }
+.item:hover{
+  box-shadow: rgb(231, 231, 231) 0px 0px 0px 3px;
+}
 @media screen and (max-width:650px) {
   .contacts {
     flex-direction: column;

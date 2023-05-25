@@ -9,6 +9,7 @@ import { Metadata } from "next";
 import ShowSkillsModal from "../components/ShowSkillsModal";
 import Footer from "../components/Footer";
 import Contact from "../components/Contact";
+import ProjectItem from "@/components/ProjectItem";
 
 export const metadata: Metadata = {
   title: "Ivan01-tech | Portfolio",
@@ -32,6 +33,8 @@ export default function RootLayout({
               <Banner />
               <Skills />
               <Contact />
+
+              <ProjectItem />
               {children}
             </main>
           </MobileMenuPovider>
