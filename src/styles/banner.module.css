@@ -29,7 +29,7 @@
 }
 .banner_name {
   font-size: 4vw;
-  color: royalblue;
+  color: var(--primary-color);
 }
 /* =================== TYPPING EFFECT STYLES =============== */
 .banner_description {

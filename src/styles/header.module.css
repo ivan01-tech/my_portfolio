@@ -24,7 +24,7 @@
   display: flex;
   align-items: center;
   gap: 3rem;
-  color: rgb(41, 39, 39);
+  color: rgb(51, 49, 49);
 }
 
 .header_left {
@@ -60,7 +60,6 @@
   }
   .header_hamburger {
     display: block;
-    
     font-size: 2rem;
     padding: 0;
     margin: 0;
@@ -68,6 +67,7 @@
     border: none;
     background: none;
     cursor: pointer;
+    color:var(--primary-color);
   }
 
   .navbar_list {

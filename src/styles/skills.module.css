@@ -43,6 +43,7 @@
     padding: 0rem 2rem;
   }
   .skills_item {
-    margin: 1rem 1rem;
+    margin: 1rem ;
+    gap: 1.5rem;
   }
 }

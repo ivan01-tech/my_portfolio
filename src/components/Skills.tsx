@@ -15,9 +15,9 @@ function Skills({}: Props) {
 
   return (
     <section id="skills" className={styles.skill_wrap}>
-      <h2 className={styles.skill_title}>Skills</h2>
+      <h2 className="title">Skills</h2>
 
-      <p>
+      <p className="description">
         I'm able to manipulate some tools related to web development. Following
         is my tech list.
       </p>

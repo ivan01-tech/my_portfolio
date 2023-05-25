@@ -45,7 +45,7 @@ function Header({}: Props) {
               <NavBtn linkId={"skills"}>Skills</NavBtn>
             </li>
             <li>
-              <NavBtn linkId=""> Portfolio</NavBtn>
+              <NavBtn linkId="projects"> Portfolio</NavBtn>
             </li>
           </ul>
 

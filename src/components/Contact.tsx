@@ -1,7 +1,6 @@
 import React from "react";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { GrMail } from "react-icons/gr";
-import { MdLocationPin } from "react-icons/md";
 import Image from "next/image";
 import styles from "../styles/contacts.module.css";
 import Link from "next/link";
@@ -11,8 +10,8 @@ function Contact() {
 
   return (
     <section className={styles.contact_wrap}>
-      <h3 className={styles.contact_title}>Contacts</h3>
-      <p>
+      <h2 className="title">Contacts</h2>
+      <p className="description">
         You can use different way to contact mee. Fill free to choose your own.
       </p>
       <section className={styles.contacts} id="contacts">

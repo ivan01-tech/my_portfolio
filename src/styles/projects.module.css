@@ -1,0 +1,39 @@
+.projects_wrap {
+  width: 100%;
+  margin: auto;
+  max-width: 56rem;
+}
+
+.project_title {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size:2rem;
+  opacity:.8;
+}
+.project_desc {
+  margin-bottom: 2rem;
+}
+
+.project_items{
+  width: 100%;
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items:center;
+  gap:3rem;
+}
+
+.separator{
+  display:block;
+  width:100%;
+  border : 1px dashed var(--primary-color);
+}
+
+@media screen and (max-width: 56rem) {
+  .projects_wrap {
+    padding: 2rem;
+  }
+  .project_items{
+    width:100%;
+  }
+}

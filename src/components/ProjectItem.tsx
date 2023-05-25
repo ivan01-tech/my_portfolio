@@ -10,8 +10,8 @@ function ProjectItem() {
         <Image
           src="/media/note-taking-app.png"
           alt="note-taking-app"
-          width={400}
-          height={200}
+          width={450}
+          height={300}
         />
       </section>
       <section className={styles.projectItem_right}>

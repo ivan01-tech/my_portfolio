@@ -9,7 +9,9 @@ import { Metadata } from "next";
 import ShowSkillsModal from "../components/ShowSkillsModal";
 import Footer from "../components/Footer";
 import Contact from "../components/Contact";
-import ProjectItem from "@/components/ProjectItem";
+import Projects from "@/components/Projects";
+
+// TODO refactor css title
 
 export const metadata: Metadata = {
   title: "Ivan01-tech | Portfolio",
@@ -32,9 +34,8 @@ export default function RootLayout({
             <main>
               <Banner />
               <Skills />
+              <Projects />
               <Contact />
-
-              <ProjectItem />
               {children}
             </main>
           </MobileMenuPovider>
