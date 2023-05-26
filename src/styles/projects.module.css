@@ -4,29 +4,13 @@
   max-width: 56rem;
 }
 
-.project_title {
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  font-size:2rem;
-  opacity:.8;
-}
-.project_desc {
-  margin-bottom: 2rem;
-}
-
 .project_items{
   width: 100%;
   display:flex;
-  flex-direction:column;
   justify-content: center;
   align-items:center;
-  gap:3rem;
-}
-
-.separator{
-  display:block;
-  width:100%;
-  border : 1px dashed var(--primary-color);
+  flex-wrap:wrap;
+  gap:2rem;
 }
 
 @media screen and (max-width: 56rem) {

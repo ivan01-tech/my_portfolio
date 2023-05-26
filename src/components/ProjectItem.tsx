@@ -4,6 +4,8 @@ import Image from "next/image";
 import { BsDot } from "react-icons/bs";
 
 function ProjectItem() {
+
+
   return (
     <section className={styles.projectItem_wrap}>
       <section className={styles.projectItem_left}>
@@ -18,8 +20,7 @@ function ProjectItem() {
         <h3 className={styles.projectItem_title}>Note taking App</h3>
         <p className={styles.projectItem_description}>
           It's an application that can help people store their notes, modify
-          them, and delete them. They can also search them by tags. I used
-          ReactJS and Typescript to build this application.
+          them, and delete them. They can also search them by tags.
         </p>
         <div className={styles.projectItem_tags}>
           <span className={styles.projectItem_tags_item}>

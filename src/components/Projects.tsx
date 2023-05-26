@@ -13,11 +13,9 @@ function Projects({}: Props) {
       </p>
       <div className={styles.project_items}>
         <ProjectItem />
-        <span className={styles.separator} />
+        {/* <span className={styles.separator} /> */}
         <ProjectItem />
-        <span className={styles.separator} />
         <ProjectItem />
-        <span className={styles.separator} />
         <ProjectItem />
       </div>
 

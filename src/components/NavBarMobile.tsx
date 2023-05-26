@@ -111,7 +111,7 @@ function NavBarMobile({}: Props): React.JSX.Element {
               </NavBtn>
             </li>
             <li>
-              <NavBtn shouldCallToggle linkId="portfolio">
+              <NavBtn shouldCallToggle linkId="projects">
                 Portfolio
               </NavBtn>
             </li>
