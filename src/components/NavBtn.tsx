@@ -1,7 +1,9 @@
-import React, { useCallback, useEffect, useRef } from "react";
+"use client";
+import React, { useRef } from "react";
 import styles from "../styles/navbtn.module.css";
 import { useMobile } from "@/Hooks/useMobile";
-import { classActive } from "@/utils/constant";
+import { classActive, linkIDS, navBtns } from "@/utils/constant";
+import { getClassWithID } from "@/utils/getClassWithID";
 
 type Props = {
   children: React.ReactNode;
@@ -14,18 +16,18 @@ function NavBtn({ children, linkId, shouldCallToggle }: Props) {
 
   const { toggleMobileMenu } = useMobile()!;
 
+  let specialClassnameBtn = getClassWithID(linkId);
+
+  console.log("class : ", specialClassnameBtn);
   /**
-   * this helps me to apply the scroll behavoir
+   * this helps to apply the scroll behavoir
    * the function to call went a link is clicked
    * @returns
    */
   const clickHandler = () => {
+    const currentClass = classActive;
 
-    const currentClass = shouldCallToggle
-      ? classActive.mobileClass
-      : classActive.fullClass;
-
-    const isActive = document.querySelector(`.${currentClass}`);
+    const isActive = document.querySelectorAll(`.${currentClass}`);
 
     const doc = document.getElementById(linkId);
 
@@ -35,19 +37,31 @@ function NavBtn({ children, linkId, shouldCallToggle }: Props) {
 
     if (!doc) return;
 
-    // we add the current class on the 
-    if(btnRef.current){
+    // we add the current class on the
+    if (btnRef.current) {
       // remove the current class only id we found the target
-      if (isActive) isActive.classList.remove(currentClass);
+      if (isActive)
+        isActive.forEach((elt) => {
+          elt.classList.remove(currentClass);
+        });
 
-      btnRef.current.classList.add(currentClass)
+      const btns = document.querySelectorAll(`.${specialClassnameBtn}`);
+      console.log("current : ", btns);
+
+      btns.forEach((elt) => {
+        elt.classList.add(currentClass);
+      });
     }
 
     doc.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
-    <button ref={btnRef} className={styles.link_btn} onClick={clickHandler}>
+    <button
+      ref={btnRef}
+      className={`${styles.link_btn} ${specialClassnameBtn}`}
+      onClick={clickHandler}
+    >
       {children}
     </button>
   );

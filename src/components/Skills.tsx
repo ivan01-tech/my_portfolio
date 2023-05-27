@@ -1,20 +1,29 @@
 "use client";
 import { FaArrowRight, FaLine, FaLink } from "react-icons/fa";
-import React from "react";
+import React, { useRef } from "react";
 import { skillsObj } from "../utils/SkillSource";
 import SkillsItem from "./SkillsItem";
 import styles from "../styles/skills.module.css";
 import Button from "./Button";
 import { useModal } from "@/Hooks/useModal";
 import { BsArrowRight } from "react-icons/bs";
+import { linkIDS } from "@/utils/constant";
+import { useIntersectObserver } from "@/Hooks/useIntersecObserver";
 
 type Props = {};
 
 function Skills({}: Props) {
+  const skillsRef = useRef<HTMLElement | null>(null);
+
   const { toggleModal } = useModal()!;
 
+  /**
+   *  to detect wheter the banner is visible and change the associated
+   */
+  useIntersectObserver(skillsRef, { threshold:.2 });
+
   return (
-    <section id="skills" className={styles.skill_wrap}>
+    <section ref={skillsRef} id={linkIDS.skills} className={styles.skill_wrap}>
       <h2 className="title">Skills</h2>
 
       <p className="description">

@@ -29,6 +29,7 @@
   margin: 0;
   transition: 300ms ease-in-out;
   font-family: "Nunito", Verdana, Geneva, Tahoma, sans-serif;
+  font-display: swap;
 }
 
 html{
@@ -52,7 +53,7 @@ a {
   margin-bottom: 2rem;
 }
 /* color for the current active link */
-.mobile_active , .full_active{
+.active_tab{
   color: var(--primary-color);
 }
 
@@ -86,8 +87,13 @@ a {
   -webkit-background-clip: text;
   -webkit-text-fill-color: rgba(0, 0, 0, 0);
 }
-
 /* end of typing */
+
+/* social media btn */
+.white_social_btn{
+  color: whitesmoke;
+  border-color: whitesmoke;
+}
 
 /* animation for the typping effect */
 
