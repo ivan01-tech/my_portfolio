@@ -15,15 +15,15 @@ function Footer({}: Props) {
           <p>Ivan01-tech &copy; Copyright 2023</p>
         </section>
         <section className={styles.follow_btn}>
-          <FollowMeBtn link={socialNetworkLink.github}>
+          <FollowMeBtn link={socialNetworkLink.github} isWhite>
             <BsGithub />
           </FollowMeBtn>
 
-          <FollowMeBtn link={socialNetworkLink.twitter}>
+          <FollowMeBtn link={socialNetworkLink.twitter} isWhite>
             <BsTwitter />
           </FollowMeBtn>
 
-          <FollowMeBtn link={socialNetworkLink.linked}>
+          <FollowMeBtn link={socialNetworkLink.linked} isWhite>
             <ImLinkedin2 />
           </FollowMeBtn>
         </section>

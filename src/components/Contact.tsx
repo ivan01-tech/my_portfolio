@@ -32,14 +32,14 @@ function Contact() {
             <span>@ivansilatsa</span>
           </Link>
         </div>
-        <div className={styles.contact_image}>
+        
           <Image
             src="/media/undraw_contact_us_re_4qqt.svg"
             alt="contact us"
-            width={300}
-            height={300}
+            width={800}
+            height={500}
           />
-        </div>
+        
       </section>
     </section>
   );

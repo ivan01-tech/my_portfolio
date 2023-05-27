@@ -14,3 +14,9 @@
   color: hsl(235, 100%, 78%);
   border-color: hsl(235, 100%, 78%);
 }
+
+.follower_wrap .bnt_white {
+  
+  color: whitesmoke;
+  border-color: whitesmoke;
+}

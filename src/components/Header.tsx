@@ -1,12 +1,9 @@
 "use client";
 
-import { BsFillSunFill } from "react-icons/bs";
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
 import Button from "./Button";
 import styles from "../styles/header.module.css";
-import ThemeBtn from "./ThemeBtn";
 import { useMobile } from "../Hooks/useMobile";
 import NavBtn from "./NavBtn";
 
@@ -25,6 +22,7 @@ function Header({}: Props) {
             onClick={() => toggleMobileMenu(true)}
           >
             &#9776;
+            {/* SlMenu */}
           </button>
 
           <Image
@@ -33,6 +31,7 @@ function Header({}: Props) {
             height={30}
             alt="ivan01-tech"
             priority
+            className={styles.header_logo}
           />
         </div>
 
@@ -52,10 +51,10 @@ function Header({}: Props) {
           <div className={styles.navbar_btn}>
 
             <Button>Contact Me</Button>
-            
-            <ThemeBtn>
+            {/* the button to add dark mode later */}
+            {/* <ThemeBtn>
               <BsFillSunFill />
-            </ThemeBtn>
+            </ThemeBtn> */}
           </div>
         </nav>
       </section>

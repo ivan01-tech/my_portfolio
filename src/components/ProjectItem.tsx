@@ -2,42 +2,39 @@ import React from "react";
 import styles from "../styles/project.module.css";
 import Image from "next/image";
 import { BsDot } from "react-icons/bs";
+import Link from "next/link";
 
-function ProjectItem() {
+type Props = { project: ProjectsItem };
 
-
+function ProjectItem({ project }: Props) {
   return (
     <section className={styles.projectItem_wrap}>
       <section className={styles.projectItem_left}>
         <Image
-          src="/media/note-taking-app.png"
-          alt="note-taking-app"
+          src={project.imagePath}
+          alt={project.projectName}
           width={450}
           height={300}
         />
       </section>
       <section className={styles.projectItem_right}>
-        <h3 className={styles.projectItem_title}>Note taking App</h3>
-        <p className={styles.projectItem_description}>
-          It's an application that can help people store their notes, modify
-          them, and delete them. They can also search them by tags.
-        </p>
+        <h3 className={styles.projectItem_title}>{project.projectName}</h3>
+        <p className={styles.projectItem_description}>{project.description}</p>
         <div className={styles.projectItem_tags}>
-          <span className={styles.projectItem_tags_item}>
-            <BsDot />
-            <span>React</span>
-          </span>
-          <span className={styles.projectItem_tags_item}>
-            <BsDot />
-            <span>TypeScript</span>
-          </span><span className={styles.projectItem_tags_item}>
-            <BsDot />
-            <span>Css Module</span>
-          </span>
+          {project.tags.map((tag) => (
+            <span className={styles.projectItem_tags_item}>
+              <BsDot />
+              <span>{tag}</span>
+            </span>
+          ))}
         </div>
         <div className={styles.projectItem_links}>
-          <button>Live View</button>
-          <button>View code</button>
+          <Link href={project.source || "#"}>
+            <button>Live View</button>
+          </Link>
+          <Link href={project.link || "#"}>
+            <button>View code</button>
+          </Link>
         </div>
       </section>
     </section>

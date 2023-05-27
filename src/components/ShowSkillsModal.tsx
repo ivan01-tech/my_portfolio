@@ -4,7 +4,7 @@ import { useModal } from "@/Hooks/useModal";
 import React from "react";
 import styles from "../styles/modal.module.css";
 import { GrFormClose } from "react-icons/gr";
-import { skillsObj } from "@/utils/skillsObj";
+import { skillsObj } from "@/utils/SkillSource";
 import SkillsItem from "./SkillsItem";
 
 type Props = {};

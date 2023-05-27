@@ -82,10 +82,10 @@ function NavBarMobile({}: Props): React.JSX.Element {
             priority
           />
           <div>
-            <ThemeBtn>
+            {/* the button to add dark mode later */}
+            {/* <ThemeBtn>
               <BsFillSunFill />
-            </ThemeBtn>
-
+            </ThemeBtn> */}
             <button
               className={styles.mobile_close_btn}
               onClick={(e) => {

@@ -1,7 +1,7 @@
 "use client";
 import { FaArrowRight, FaLine, FaLink } from "react-icons/fa";
 import React from "react";
-import { skillsObj } from "../utils/skillsObj";
+import { skillsObj } from "../utils/SkillSource";
 import SkillsItem from "./SkillsItem";
 import styles from "../styles/skills.module.css";
 import Button from "./Button";

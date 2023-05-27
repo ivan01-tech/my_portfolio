@@ -53,7 +53,11 @@
 .header_hamburger {
   display: none;
 }
-
+@media screen and (max-width: 501px) {
+  .header_logo{
+  display: none;
+  }
+}
 @media screen and (max-width: 689px) {
   .header {
     padding: 0.5rem 2rem;

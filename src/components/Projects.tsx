@@ -1,24 +1,21 @@
 import React from "react";
 import styles from "../styles/projects.module.css";
-import  ProjectItem  from "@/components/ProjectItem";
+import ProjectItem from "@/components/ProjectItem";
+import { projectsSource } from "@/utils/PorjectsSource";
 
-type Props = {};
+type Props = { };
 
 function Projects({}: Props) {
+  
   return (
-    <section className={styles.projects_wrap} id="projects" >
+    <section className={styles.projects_wrap} id="projects">
       <h2 className={`title`}>Projects</h2>
       <p className={`description`}>
-        I worked on many personal projects and here are some of it!
+Since i start web developement, i worked on many personal projects and here are some of them!
       </p>
       <div className={styles.project_items}>
-        <ProjectItem />
-        {/* <span className={styles.separator} /> */}
-        <ProjectItem />
-        <ProjectItem />
-        <ProjectItem />
+        {projectsSource.map(project=> <ProjectItem project={project} /> )}
       </div>
-
     </section>
   );
 }

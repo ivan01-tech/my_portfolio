@@ -3,7 +3,6 @@
   max-width: var(--max-width);
   margin: auto;
   padding-top: 2rem;
-
   scroll-margin-top: -100px;
 }
 .skills_item {

@@ -62,11 +62,11 @@ function Banner({}: Props) {
 
           <section ref={descriptionRef} className={styles.banner_description}>
             {/* decription content */}
-            <h3 className={styles.text}>
-              <span className={styles.text_word}>A</span>{" "}
-              <span className={styles.text_word}>NodeJS</span>{" "}
-              <span className={styles.text_word}>Backend</span>{" "}
-              <span className={styles.text_word}>Developer</span>
+            <h3 className={"text"}>
+              <span className={"text_word"}>A</span>{" "}
+              <span className={"text_word"}>NodeJS</span>{" "}
+              <span className={"text_word"}>Backend</span>{" "}
+              <span className={"text_word"}>Developer</span>
             </h3>
           </section>
         </section>

@@ -14,11 +14,9 @@
 
 .banner_wrap {
   background-color: var(--primary-bg-color);
-  /* min-height: calc(100vh - 50px); */
   width: 100%;
   max-width: 56rem;
   padding: 1rem;
-  /* padding-top: 5rem; */
   display: flex;
   flex-direction: column;
   gap: 2rem;

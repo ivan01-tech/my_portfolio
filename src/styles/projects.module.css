@@ -2,6 +2,8 @@
   width: 100%;
   margin: auto;
   max-width: 56rem;
+  padding-top: 2rem;
+  scroll-margin-top: -50px;
 }
 
 .project_items{
