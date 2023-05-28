@@ -1,14 +1,17 @@
 .skill_wrap {
   position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-size: 1.1rem;
   width: 150px;
   height: 180px;
   padding: 1rem;
   border-radius: 3px;
   font-weight: 700;
   gap: 2rem;
+
   box-shadow: rgb(231, 231, 231) 0px 0px 0px 1px;
   background-color: white;
   transition: border-color 200ms ease-in-out 0s,
@@ -37,11 +40,13 @@
   top: -1px;
   transition: border-top 200ms ease-in-out 0s;
 }
+
 .skill_wrap:hover::before {
   border-radius: 3px 3px 0px 0px;
   border-color: rgb(255, 201, 81);
   z-index: 1;
 }
+
 .skill_wrap:hover::after {
   bottom: -5px;
   content: " ";
@@ -51,25 +56,9 @@
   width: 100%;
 }
 
-.skill_content {
-  align-self: flex-end;
-  width: 100%;
-  height: 90%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-  font-size: 1.1rem;
-}
-.skill_content .skill_head {
-  flex: 1;
-}
-
-.skill_content .skill_head image {
+.skill_wrap image {
   object-fit: contain;
 }
-
 
 @media screen and (max-width:955px) {
   .skill_wrap{

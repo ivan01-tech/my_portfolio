@@ -7,7 +7,7 @@ type Props = {};
 
 function HireMe({}: Props) {
   return (
-    <Link href={socialNetworkLink.linked}>
+    <Link prefetch={false} href={socialNetworkLink.linked}>
       <Button fill>Hire Me</Button>
     </Link>
   );

@@ -23,11 +23,11 @@ function Contact() {
       </p>
       <section className={styles.contacts} id="contacts">
         <div className={styles.contacts_left}>
-          <Link href="tel:+237681832508" className={styles.item}>
+          <Link prefetch={false} href="tel:+237681832508" className={styles.item}>
             <BsFillTelephoneFill />
             <span>+237 681-832-508</span>
           </Link>
-          <Link href={"mailto:ivansilatsa@gmail.com"} className={styles.item}>
+          <Link prefetch={false} href={"mailto:ivansilatsa@gmail.com"} className={styles.item}>
             <GrMail />
             <span>ivansilatsa@gmail.com</span>
           </Link>

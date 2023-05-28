@@ -20,20 +20,27 @@ function ProjectItem({ project }: Props) {
       <section className={styles.projectItem_right}>
         <h3 className={styles.projectItem_title}>{project.projectName}</h3>
         <p className={styles.projectItem_description}>{project.description}</p>
+
         <div className={styles.projectItem_tags}>
           {project.tags.map((tag) => (
-            <span className={styles.projectItem_tags_item}>
-              <BsDot />
-              <span>{tag}</span>
-            </span>
+            <span className={styles.projectItem_tags_item}>{tag}</span>
           ))}
         </div>
+
         <div className={styles.projectItem_links}>
-          <Link href={project.source || "#"}>
-            <button>Live View</button>
+          <Link
+            href={project.link || "#"}
+            className={!project.link ? styles.link_disable : ""}
+            prefetch={false}
+          >
+            Live View
           </Link>
-          <Link href={project.link || "#"}>
-            <button>View code</button>
+          <Link
+            href={project.source || "#"}
+            className={!project.source ? styles.link_disable : ""}
+            prefetch={false}
+          >
+            View code
           </Link>
         </div>
       </section>

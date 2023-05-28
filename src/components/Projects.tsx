@@ -14,7 +14,7 @@ function Projects({}: Props) {
   /**
    *  to detect wheter the banner is visible and change the associated
   */ 
-  useIntersectObserver(projectRef, { rootMargin: "5%",threshold:.1 });
+  useIntersectObserver(projectRef, { rootMargin: "0%",threshold:.2 });
   return (
     <section ref={projectRef} className={styles.projects_wrap} id={linkIDS.projects}>
       <h2 className={`title`}>Projects</h2>
@@ -23,6 +23,9 @@ function Projects({}: Props) {
         here are some of them!
       </p>
       <div className={styles.project_items}>
+        {projectsSource.map((project) => (
+          <ProjectItem project={project} />
+        ))}
         {projectsSource.map((project) => (
           <ProjectItem project={project} />
         ))}

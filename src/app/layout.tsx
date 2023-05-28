@@ -12,12 +12,13 @@ import Contact from "../components/Contact";
 import Projects from "@/components/Projects";
 
 // TODO react-ts-hooks : don't forget to remove it ;
+// HTML, avoiding @import and lazy loading CSS
 // TODO treshol
+
 /** //TODO
  * LAZY LOADING COMP
  * import LazyLoad from 'react-lazyload';
  * <LazyLoad offset={100}> <Footer /></LazyLoad>
-
  * // TODO DOWNLOAD REQUIRED SVG ICONS 
  * 
  *  download google fonts
@@ -30,16 +31,26 @@ import Projects from "@/components/Projects";
   },
 
   set the prefetch link to false
- * 
- * 
+ 
+  <Head>
+<title>My Clothing Store</title>
+<meta name="description" content="Come to my store for great apparel!" />
+<meta property="og:title" content="My Clothing Store" />
+<meta property="og:description" content="Come to my store for great apparel!" />
+<meta property="og:url" content="https://myclothingstore.com/" />
+<meta property="og:type" content="website" />
+<link rel="icon" href="/favicon.ico" />
+</Head>
+
+<meta name="description" content="">
  */
 
 // TODO refactor css title
 // how to add description for my portfolio
 export const metadata: Metadata = {
-  applicationName: "Ivan01-tech Portfolio",
-  title: "Ivan01-tech | Portfolio",
-  description: "Created by Ivan Silatsa",
+  description:
+    "I'm a fullstack web developer. I like to develop , test, and deploy web apps using javascript technologies",
+  title: "Portfolio | Ivan01-tech",
   authors: [{ name: "Silatsa Ivan", url: "" }],
 };
 

@@ -19,8 +19,8 @@ function Banner({}: Props) {
 
   /**
    *  to detect wheter the banner is visible and change the associated
-  */ 
-  useIntersectObserver(bannerRef, { rootMargin: "10%",threshold:.1 });
+   */
+  useIntersectObserver(bannerRef, { rootMargin: "10%", threshold: 0.1 });
 
   let round = 3;
   // to set the content of the description after the aimation is completed
@@ -33,27 +33,18 @@ function Banner({}: Props) {
       num === 0
         ? `
       <h3 class="text">
-        <span class="text_word">A</span>
-        <span class="text_word">React</span>
-        <span class="text_word">Frontend</span>
-        <span class="text_word">Developer</span>
+        <span class="text_word">A React Frontend Developer </span>
       </h3> 
     `
         : num === 1
         ? `
     <h3 class="text">
-      <span class="text_word">A</span>
-      <span class="text_word">NodeJS</span>
-      <span class="text_word">Backend</span>
-      <span class="text_word">Developer</span>
+      <span class="text_word">A NodeJS Backend Developer </span>
     </h3>
     `
         : `
     <h3 class="text">
-      <span class="text_word">A</span>
-      <span class="text_word">Fullstack</span>
-      <span class="text_word">JavaScript</span>
-      <span class="text_word">Dev</span>
+      <span class="text_word">A Fullstack JavaScript Dev</span>
     </h3>
     `;
 

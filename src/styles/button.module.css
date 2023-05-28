@@ -1,19 +1,21 @@
 .btn {
   outline: none;
-  border: var(--border-btn-width) solid rgb(218, 49, 86);
+  border: var(--border-btn-width) solid var(--secondary-text-cl);
   border-radius: 2rem;
   padding: 0.3rem 1rem;
   cursor: pointer;
   font-weight: 700;
-  color:#da3156;
-
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  gap:.5rem;
+  color: #da3156;
+  background-color: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
 }
-
-.fill{
+.btn:hover {
+  background-color: whitesmoke;
+}
+.fill {
   color: white;
   background-color: #da3156;
 }
