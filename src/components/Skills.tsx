@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef } from "react";
+import  { useRef } from "react";
 import { skillsObj } from "../utils/SkillSource";
 import SkillsItem from "./SkillsItem";
 import styles from "../styles/skills.module.css";
@@ -39,7 +39,7 @@ function Skills({}: Props) {
       <div className={styles.view_all_sec}>
         <Button
           onClick={() => {
-            console.log("called !");
+            //console.log("called !");
             toggleModal(true);
           }}
         >

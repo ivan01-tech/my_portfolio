@@ -18,7 +18,7 @@ export const ModalProvider = ({ children }: Props) => {
 
   // a function to toggle the modal  state
   const toggleModal = function (arg: boolean | null = null) {
-    console.log(ShowModal);
+    //console.log(ShowModal);
     if (arg && typeof arg == "boolean") {
        setShowModal(arg);
     } else {

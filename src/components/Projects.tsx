@@ -1,5 +1,5 @@
 "use client"
-import React, { useRef } from "react";
+import  { useRef } from "react";
 import styles from "../styles/projects.module.css";
 import ProjectItem from "@/components/ProjectItem";
 import { projectsSource } from "@/utils/PorjectsSource";
@@ -23,12 +23,10 @@ function Projects({}: Props) {
         here are some of them!
       </p>
       <div className={styles.project_items}>
-        {projectsSource.map((project) => (
-          <ProjectItem project={project} />
+        {projectsSource.map((project,ind) => (
+          <ProjectItem project={project} key={ind+project.projectName} />
         ))}
-        {projectsSource.map((project) => (
-          <ProjectItem project={project} />
-        ))}
+        
       </div>
     </section>
   );

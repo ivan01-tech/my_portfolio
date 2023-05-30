@@ -1,5 +1,5 @@
 .btn {
-  outline: none;
+  /* outline: none; */
   border: var(--border-btn-width) solid var(--secondary-text-cl);
   border-radius: 2rem;
   padding: 0.3rem 1rem;

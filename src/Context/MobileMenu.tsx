@@ -17,7 +17,7 @@ export const MobileMenuPovider = ({ children }: Props) => {
 
   // a function to toggle the mobile menu state
   const toggleMobileMenu = function (arg: boolean | null = null) {
-    console.log(ShowMobileMenu);
+    //console.log(ShowMobileMenu);
     if (arg && typeof arg == "boolean") {
        setShowMobileMenu(arg);
     } else {

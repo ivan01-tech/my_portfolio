@@ -17,9 +17,20 @@
 
 @media screen and (max-width: 56rem) {
   .projects_wrap {
-    padding: 2rem;
+    padding: 1rem;
   }
   .project_items{
     width:100%;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .projects_wrap {
+    padding: .5rem;
+    margin: 1rem 0rem;
+  }
+  .project_items{
+    flex-direction: column;
+    gap: 2rem;
   }
 }

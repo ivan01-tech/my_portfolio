@@ -1,6 +1,5 @@
 import Link from "next/link";
 import styles from "../styles/follower.module.css";
-import React from "react";
 
 type Props = { children: React.ReactNode; link: string;};
 

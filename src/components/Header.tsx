@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import React from "react";
 import Button from "./Button";
 import styles from "../styles/header.module.css";
 import { useMobile } from "../Hooks/useMobile";
@@ -28,7 +27,7 @@ function Header({}: Props) {
             src={"/logos/ivan01-tech-png.png"}
             width={100}
             height={30}
-            alt="ivan01-tech"
+            alt="Ivan01-tech logo"
             priority
             className={styles.header_logo}
           />

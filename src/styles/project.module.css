@@ -1,5 +1,5 @@
 .projectItem_wrap {
-  width: 350px;
+width: 350px;
   min-height: 400px;
   display: flex;
   flex-direction: column;
@@ -60,14 +60,8 @@
   text-transform: capitalize;
   padding: 0.3rem 0.6rem;
   font-size: .8rem;
-  gap: .3rem;
   color: white;
   border-radius: 4px;
-}
-.projectItem_links > * svg {
-font-size: 1rem;
-color:inherit;
-background: inherit;
 }
 .projectItem_links > :nth-child(1) {
   background-color: var(--secondary-text-cl);
@@ -80,6 +74,7 @@ background: inherit;
 .projectItem_links .link_disable {
   background-color: rgb(230, 227, 227);
   color: gray;
+  cursor: not-allowed;
 }
 
 .projectItem_description {
@@ -108,23 +103,21 @@ background: inherit;
   font-weight: 700;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 751px) {
   .projectItem_wrap {
-    width: 95%;
-  }
-}
-
-@media screen and (max-width: 610px) {
-  .projectItem_wrap {
-    width: 85%;
-  }
-}
-
-@media screen and (max-width: 810px) {
-  .projectItem_wrap {
-    width: 75%;
+    width: 70%;
     margin: auto;
   }
 }
 
+@media screen and (max-width: 609px) {
+  .projectItem_wrap {
+    width: 80%;
+  }
+}
 
+@media screen and (max-width: 449px) {
+  .projectItem_wrap {
+    width: 90%;
+  }
+}

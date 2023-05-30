@@ -1,8 +1,3 @@
-import React from "react";
-import { FollowMeBtn } from "./FollowMeBtn";
-import { BsGithub, BsTwitter } from "react-icons/bs";
-import { socialNetworkLink } from "@/utils/constant";
-import { ImLinkedin2 } from "react-icons/im";
 import styles from "../styles/footer.module.css";
 import LinkedIn from "./LinkedIn";
 import GitHub from "./GitHub";

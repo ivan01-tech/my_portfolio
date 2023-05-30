@@ -42,3 +42,23 @@
     gap: 1.5rem;
   }
 }
+
+@media screen and (max-width: 499px) {
+  .skill_wrap {
+    padding: 0rem 1rem;
+  }
+  .skills_item {
+    margin: .5rem ;
+    gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 445px) {
+  .skill_wrap {
+    padding: 0rem .5rem;
+  }
+  .skills_item {
+    margin: .5rem ;
+    gap: .5rem;
+  }
+}

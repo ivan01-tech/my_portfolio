@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef } from "react";
+import  { useRef } from "react";
 import styles from "../styles/navbtn.module.css";
 import { useMobile } from "@/Hooks/useMobile";
 import { classActive, linkIDS, navBtns } from "@/utils/constant";
@@ -18,7 +18,7 @@ function NavBtn({ children, linkId, shouldCallToggle }: Props) {
 
   let specialClassnameBtn = getClassWithID(linkId);
 
-  console.log("class : ", specialClassnameBtn);
+  //console.log("class : ", specialClassnameBtn);
   /**
    * this helps to apply the scroll behavoir
    * the function to call went a link is clicked
@@ -33,7 +33,7 @@ function NavBtn({ children, linkId, shouldCallToggle }: Props) {
 
     shouldCallToggle && toggleMobileMenu(false);
 
-    console.log(currentClass, isActive, doc);
+    //console.log(currentClass, isActive, doc);
 
     if (!doc) return;
 
@@ -46,7 +46,7 @@ function NavBtn({ children, linkId, shouldCallToggle }: Props) {
         });
 
       const btns = document.querySelectorAll(`.${specialClassnameBtn}`);
-      console.log("current : ", btns);
+      //console.log("current : ", btns);
 
       btns.forEach((elt) => {
         elt.classList.add(currentClass);

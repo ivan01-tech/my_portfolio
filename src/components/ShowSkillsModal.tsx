@@ -1,6 +1,5 @@
 "use client";
 import { useModal } from "@/Hooks/useModal";
-import React from "react";
 import styles from "../styles/modal.module.css";
 import { skillsObj } from "@/utils/SkillSource";
 import SkillsItem from "./SkillsItem";

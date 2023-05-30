@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { useEffect, useRef } from "react";
+import  { useEffect, useRef } from "react";
 import styles from "../styles/mobile.module.css";
 import { useMobile } from "@/Hooks/useMobile";
 import DownloaMyCV from "./DownloaMyCV";
@@ -43,7 +43,7 @@ function NavBarMobile({}: Props): React.JSX.Element {
   }, [mobileWrapperRef]); */
 
   /* function onResizeHandler(e: Event) {
-    console.log("resized");
+    //console.log("resized");
     toggleMobileMenu(false);
   }*/
 
@@ -73,10 +73,10 @@ function NavBarMobile({}: Props): React.JSX.Element {
       <section className={styles.mobile_container}>
         <section className={styles.mobile_container_head}>
           <Image
-            src={"/logos/ivan01.png"}
+            src={"/logos/ivan01-tech-png.png"}
             width={100}
             height={30}
-            alt="ivan01-tech"
+            alt="Ivan01-tech logo"
             priority
           />
           <div>

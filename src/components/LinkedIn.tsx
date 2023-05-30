@@ -1,7 +1,5 @@
 import { FollowMeBtn } from './FollowMeBtn'
 import { socialNetworkLink } from '@/utils/constant';
-import { BsLinkedin } from 'react-icons/bs';
-import { GrLinkedinOption } from 'react-icons/gr';
 
 type Props = {}
 

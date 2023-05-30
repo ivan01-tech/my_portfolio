@@ -4,11 +4,11 @@ import styles from "../styles/banner.module.css";
 import DownloaMyCV from "./DownloaMyCV";
 import HireMe from "./HireMe";
 import { animationTime, linkIDS } from "@/utils/constant";
-import { useInterval } from "usehooks-ts";
 import { useIntersectObserver } from "@/Hooks/useIntersecObserver";
 import Twitter from "./Twitter";
 import GitHub from "./GitHub";
 import LinkedIn from "./LinkedIn";
+import useInterval from "@/Hooks/useInterval";
 
 type Props = {};
 
@@ -60,9 +60,9 @@ function Banner({}: Props) {
 
           <section ref={descriptionRef} className={styles.banner_description}>
             {/* decription content */}
-            <h3 className={"text"}>
+            <h2 className={"text"}>
               <span className={"text_word"}>A NodeJS Backend Developer</span>
-            </h3>
+            </h2>
           </section>
         </section>
 

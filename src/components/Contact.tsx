@@ -1,11 +1,8 @@
 "use client";
 import React, { useRef } from "react";
-import { BsFillTelephoneFill } from "react-icons/bs";
-import { GrMail } from "react-icons/gr";
 import Image from "next/image";
 import styles from "../styles/contacts.module.css";
 import Link from "next/link";
-import { FaTwitter } from "react-icons/fa";
 import { useIntersectObserver } from "@/Hooks/useIntersecObserver";
 import TwitterIcon from "./TwitterIcon";
 import Email from "./Email";

@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Nunito";
-  src: url("/public/fonts/Nunito-Medium.ttf") format("truetype"),
+  src: url("/fonts/Nunito-Medium.ttf") format("truetype"),
     url("/fonts/Nunito-Regular.ttf") format("truetype");
   font-display: swap;
 }
@@ -119,8 +119,15 @@ svg {
 }
 
 /* end animation for the typping effect */
-@media screen and (max-width: 450px) {
+
+@media screen and (max-width: 457px) {
   .text {
     font-size: 1.5rem;
+    height: auto;
+  }
+}
+@media screen and (max-width: 351px) {
+  .text {
+    font-size: 1.2rem;
   }
 }

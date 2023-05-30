@@ -1,8 +1,5 @@
 import { FollowMeBtn } from "./FollowMeBtn";
-import Image from "next/image";
 import { socialNetworkLink } from "@/utils/constant";
-import GitHubIcon from "../icons/github.svg";
-import { GrGithub } from "react-icons/gr";
 type Props = {};
 
 function GitHub({}: Props) {

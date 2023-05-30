@@ -15,7 +15,7 @@ function Button({ children, fill, onClick, ...properties }: ButtonProps) {
    * @returns
    */
   const clickHandler = () => {
-    const currentClass = classActive.fullClass;
+    const currentClass = classActive;
     const isActive = document.querySelector(`.${currentClass}`);
     const doc = document.getElementById("contacts");
 

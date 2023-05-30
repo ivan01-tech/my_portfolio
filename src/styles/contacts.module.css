@@ -3,7 +3,6 @@
   max-width: 56rem;
   margin: auto;
   padding-top: 2rem;
-
 }
 
 .contacts {
@@ -14,55 +13,53 @@
   gap: 2rem;
 }
 .contacts > * {
-  width:50%;
-  height:100%;
+  width: 50%;
+  height: 100%;
 }
 .contacts .contacts_left {
-  opacity: .8;
+  opacity: 0.8;
   display: flex;
   flex-direction: column;
-  align-items:center;
+  align-items: center;
   gap: 1.3rem;
-  justify-content:center;
+  justify-content: center;
 }
 
 .contacts .item {
-  width:100%;
+  width: 100%;
   display: flex;
   align-items: center;
   gap: 1rem;
   font-size: 1rem;
-  padding:1rem 2rem;
+  padding: 1rem 2rem;
   border-radius: 5px;
   box-shadow: rgb(231, 231, 231) 0px 0px 0px 2px;
 }
-.item:hover{
+.item:hover {
   box-shadow: rgb(231, 231, 231) 0px 0px 0px 3px;
 }
-@media screen and (max-width:650px) {
+@media screen and (max-width: 650px) {
   .contacts {
     flex-direction: column-reverse;
     gap: 1rem;
   }
   .contacts > * {
-    width:100%;
-    height:auto;
+    width: 100%;
+    height: auto;
   }
   .contacts .item {
-    width:70%;
+    width: 70%;
     gap: 2rem;
   }
 }
+
 @media screen and (max-width: 56rem) {
   .contact_wrap {
     padding: 2rem;
   }
-  
 }
 @media screen and (max-width: 456px) {
   .contacts .item {
-width: 90%;
+    width: 90%;
   }
-  
 }
-

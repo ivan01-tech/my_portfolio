@@ -16,10 +16,10 @@ export const useIntersectObserver = function (
 
       const observer = new IntersectionObserver(function ([ent]) {
         if (ent.isIntersecting) {
-          console.log("here we go : ", elementRef);
+          //console.log("here we go : ", elementRef);
 
           const id = elementRef.current?.id;
-          console.log("id : ", id);
+          //console.log("id : ", id);
 
           const areActive = document.querySelectorAll(`.${classActive}`);
 
@@ -33,7 +33,7 @@ export const useIntersectObserver = function (
           
           const btns = document.querySelectorAll(`.${specialClassnameBtn}`);
 
-          console.log("current : ", btns);
+          //console.log("current : ", btns);
 
           btns.forEach((elt) => {
             elt.classList.add(classActive);
