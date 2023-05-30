@@ -13,7 +13,7 @@
   --border-btn-width: 2px;
   --first-break-point: 756px;
   --mobile-width: 300px;
-  --secondary-text-cl: rgb(218, 49, 86);
+  --secondary-text-cl: #da3156;
 }
 
 *,
@@ -32,11 +32,24 @@ html {
 }
 body {
   background: white;
+  position: relative;
 }
+
 a {
   color: inherit;
   text-decoration: none;
 }
+
+svg {
+  color: inherit;
+  background-color: inherit;
+}
+/* to style to arrow rigth  on the button */
+.bold_icon{
+  font-size:1.2rem;
+  font-weight:700;
+}
+
 /* styles for every main title and descript */
 .title {
   margin-top: 2rem;

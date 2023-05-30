@@ -30,11 +30,7 @@
   justify-content: flex-end;
 }
 
-/* to style to arrow rigth  on the button */
-.arrLeft{
-  font-size:1.2rem;
-  font-weight: 700;
-}
+
 
 /* =================== media queries ================== */
 @media screen and (max-width: 930px) {

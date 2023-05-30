@@ -1,14 +1,13 @@
 "use client";
-import { FaArrowRight, FaLine, FaLink } from "react-icons/fa";
 import React, { useRef } from "react";
 import { skillsObj } from "../utils/SkillSource";
 import SkillsItem from "./SkillsItem";
 import styles from "../styles/skills.module.css";
 import Button from "./Button";
 import { useModal } from "@/Hooks/useModal";
-import { BsArrowRight } from "react-icons/bs";
 import { linkIDS } from "@/utils/constant";
 import { useIntersectObserver } from "@/Hooks/useIntersecObserver";
+import LongLine from "./LongLine";
 
 type Props = {};
 
@@ -45,7 +44,8 @@ function Skills({}: Props) {
           }}
         >
           <span>See More </span>
-          <BsArrowRight className={styles.arrLeft} />
+          {/* <BsArrowRight className={styles.arrLeft} /> */}
+          <LongLine />
         </Button>
       </div>
     </section>

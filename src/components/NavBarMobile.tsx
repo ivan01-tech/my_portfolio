@@ -1,18 +1,16 @@
 "use client";
-import { ImLinkedin2 } from "react-icons/im";
 import Image from "next/image";
 import React, { useEffect, useRef } from "react";
-import ThemeBtn from "./ThemeBtn";
-import { BsFillSunFill, BsGithub, BsTwitter } from "react-icons/bs";
-import { GrFormClose } from "react-icons/gr";
 import styles from "../styles/mobile.module.css";
-import { FollowMeBtn } from "./FollowMeBtn";
 import { useMobile } from "@/Hooks/useMobile";
 import DownloaMyCV from "./DownloaMyCV";
 import HireMe from "./HireMe";
 import NavBtn from "./NavBtn";
-import { socialNetworkLink } from "@/utils/constant";
 import debounce from "@/utils/debounce";
+import Twitter from "./Twitter";
+import GitHub from "./GitHub";
+import LinkedIn from "./LinkedIn";
+import CloseBtn from "./CloseBtn";
 
 type Props = {};
 
@@ -75,7 +73,7 @@ function NavBarMobile({}: Props): React.JSX.Element {
       <section className={styles.mobile_container}>
         <section className={styles.mobile_container_head}>
           <Image
-            src={"/logos/ivan01-tech.png"}
+            src={"/logos/ivan01.png"}
             width={100}
             height={30}
             alt="ivan01-tech"
@@ -93,7 +91,7 @@ function NavBarMobile({}: Props): React.JSX.Element {
                 toggleMobileMenu(false);
               }}
             >
-              <GrFormClose />
+              <CloseBtn />
             </button>
           </div>
         </section>
@@ -124,17 +122,9 @@ function NavBarMobile({}: Props): React.JSX.Element {
         </div>
 
         <section className={styles.follow_btn}>
-          <FollowMeBtn link={socialNetworkLink.github}>
-            <BsGithub />
-          </FollowMeBtn>
-
-          <FollowMeBtn link={socialNetworkLink.twitter}>
-            <BsTwitter />
-          </FollowMeBtn>
-
-          <FollowMeBtn link={socialNetworkLink.linked}>
-            <ImLinkedin2 />
-          </FollowMeBtn>
+          <Twitter />
+          <GitHub />
+          <LinkedIn />
         </section>
       </section>
     </section>

@@ -22,11 +22,10 @@ function Header({}: Props) {
             onClick={() => toggleMobileMenu(true)}
           >
             &#9776;
-            {/* SlMenu */}
           </button>
 
           <Image
-            src={"/logos/ivan01-tech.png"}
+            src={"/logos/ivan01-tech-png.png"}
             width={100}
             height={30}
             alt="ivan01-tech"

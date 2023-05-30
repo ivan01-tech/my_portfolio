@@ -4,7 +4,7 @@ export const projectsSource: ProjectsItem[] = [
     projectName: "Nested Comments System",
     tags: ["React", "NodeJS", "Express", "Prisma", "Tailwind"],
     description:
-      `A blog post with an advanced system of comments where people can add new comments related to a specific post, update their comments, delete them, and also reply to other comments in an infinite way. It's like a small Reddit clone.`,
+      `A blog with an advanced system of comments where you can add,update, delete, and also reply to other comments comments related to a specific post in an infinite way.`,
     link: "",
     source: "https://github.com/ivan01-tech/nested-comments-system",
   },

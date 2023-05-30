@@ -1,11 +1,10 @@
 "use client";
-
 import { useModal } from "@/Hooks/useModal";
 import React from "react";
 import styles from "../styles/modal.module.css";
-import { GrFormClose } from "react-icons/gr";
 import { skillsObj } from "@/utils/SkillSource";
 import SkillsItem from "./SkillsItem";
+import CloseBtn from "./CloseBtn";
 
 type Props = {};
 
@@ -20,7 +19,7 @@ function ShowSkillsModal({}: Props) {
         <div className={styles.modal_head}>
           <h1>Skills</h1>
           <div onClick={() => toggleModal(false)}>
-            <GrFormClose />
+          <CloseBtn />
           </div>
         </div>
         <div className={styles.modal_main}>

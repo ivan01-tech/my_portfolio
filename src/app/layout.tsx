@@ -10,6 +10,7 @@ import ShowSkillsModal from "../components/ShowSkillsModal";
 import Footer from "../components/Footer";
 import Contact from "../components/Contact";
 import Projects from "@/components/Projects";
+import GoTop from "@/components/GoTop";
 
 // TODO react-ts-hooks : don't forget to remove it ;
 // HTML, avoiding @import and lazy loading CSS
@@ -18,7 +19,8 @@ import Projects from "@/components/Projects";
 /** //TODO
  * LAZY LOADING COMP
  * import LazyLoad from 'react-lazyload';
- * <LazyLoad offset={100}> <Footer /></LazyLoad>
+ * import GoTop from '../components/GoTop';
+<LazyLoad offset={100}> <Footer /></LazyLoad>
  * // TODO DOWNLOAD REQUIRED SVG ICONS 
  * 
  *  download google fonts
@@ -51,7 +53,7 @@ export const metadata: Metadata = {
   description:
     "I'm a fullstack web developer. I like to develop , test, and deploy web apps using javascript technologies",
   title: "Portfolio | Ivan01-tech",
-  authors: [{ name: "Silatsa Ivan", url: "" }],
+  // authors: [{ name: "Silatsa Ivan", url: "" }],
 };
 
 export default function RootLayout({
@@ -62,6 +64,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <GoTop />
         <ModalProvider>
           <MobileMenuPovider>
             <Header />

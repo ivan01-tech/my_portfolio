@@ -1,14 +1,14 @@
 "use client";
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import styles from "../styles/banner.module.css";
-import { FollowMeBtn } from "./FollowMeBtn";
-import { BsGithub, BsTwitter } from "react-icons/bs";
-import { GrLinkedinOption } from "react-icons/gr";
 import DownloaMyCV from "./DownloaMyCV";
 import HireMe from "./HireMe";
-import { animationTime, linkIDS, socialNetworkLink } from "@/utils/constant";
+import { animationTime, linkIDS } from "@/utils/constant";
 import { useInterval } from "usehooks-ts";
 import { useIntersectObserver } from "@/Hooks/useIntersecObserver";
+import Twitter from "./Twitter";
+import GitHub from "./GitHub";
+import LinkedIn from "./LinkedIn";
 
 type Props = {};
 
@@ -61,10 +61,7 @@ function Banner({}: Props) {
           <section ref={descriptionRef} className={styles.banner_description}>
             {/* decription content */}
             <h3 className={"text"}>
-              <span className={"text_word"}>A</span>{" "}
-              <span className={"text_word"}>NodeJS</span>{" "}
-              <span className={"text_word"}>Backend</span>{" "}
-              <span className={"text_word"}>Developer</span>
+              <span className={"text_word"}>A NodeJS Backend Developer</span>
             </h3>
           </section>
         </section>
@@ -81,17 +78,9 @@ function Banner({}: Props) {
           </section>
 
           <section className={styles.follow_btns}>
-            <FollowMeBtn link={socialNetworkLink.github}>
-              <BsGithub />
-            </FollowMeBtn>
-
-            <FollowMeBtn link={socialNetworkLink.twitter}>
-              <BsTwitter />
-            </FollowMeBtn>
-
-            <FollowMeBtn link={socialNetworkLink.linked}>
-              <GrLinkedinOption />
-            </FollowMeBtn>
+            <Twitter />
+            <GitHub />
+            <LinkedIn />
           </section>
         </section>
       </section>

@@ -1,8 +1,9 @@
 import React from "react";
 import styles from "../styles/project.module.css";
 import Image from "next/image";
-import { BsDot } from "react-icons/bs";
 import Link from "next/link";
+import { GrFormView, GrView } from "react-icons/gr";
+import { BsLink45Deg, BsViewStacked } from "react-icons/bs";
 
 type Props = { project: ProjectsItem };
 
@@ -33,14 +34,16 @@ function ProjectItem({ project }: Props) {
             className={!project.link ? styles.link_disable : ""}
             prefetch={false}
           >
-            Live View
+            <BsLink45Deg  />
+            <span>View</span>
           </Link>
           <Link
             href={project.source || "#"}
             className={!project.source ? styles.link_disable : ""}
             prefetch={false}
           >
-            View code
+            <GrFormView />
+            <span>Code</span>
           </Link>
         </div>
       </section>

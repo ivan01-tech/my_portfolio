@@ -5,17 +5,20 @@
   padding: 0.3rem 1rem;
   cursor: pointer;
   font-weight: 700;
-  color: #da3156;
+  color: var(--secondary-text-cl);
   background-color: inherit;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
 }
+
 .btn:hover {
   background-color: whitesmoke;
+  color: var(--secondary-text-cl);
+
 }
 .fill {
   color: white;
-  background-color: #da3156;
+  background-color: var(--secondary-text-cl);
 }
