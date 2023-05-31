@@ -1,19 +1,18 @@
-import "./globals.css";
-import { MobileMenuPovider } from "@/Context/MobileMenu";
-import { ModalProvider } from "@/Context/ModalContext";
-import Header from "@/components/Header";
 import type { Metadata } from "next";
-import Footer from "../components/Footer";
-import GoTop from "@/components/GoTop";
 import dynamic from "next/dynamic";
+import { ModalProvider } from "./Context/ModalContext";
+import { MobileMenuPovider } from "./Context/MobileMenu";
+import GoTop from "./components/GoTop";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
-const LazyMobileMenu = dynamic(() => import("../components/NavBarMobile"));
-const LazyModal = dynamic(() => import("../components/ShowSkillsModal"));
+const LazyMobileMenu = dynamic(() => import("./components/NavBarMobile"));
+const LazyModal = dynamic(() => import("./components/ShowSkillsModal"));
 
-export const metadata: Metadata = {
+export const metadata: Metadata= {
   description:
     "I'm a fullstack web developer. I like to develop , test, and deploy web apps using javascript technologies",
-  title: "Portfolio | Ivan01-tech",
+  title: "Portfolio - Ivan01-tech",
   robots: "index, follow",
 };
 
