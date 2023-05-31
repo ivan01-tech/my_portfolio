@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import  { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import styles from "../styles/mobile.module.css";
 import { useMobile } from "@/Hooks/useMobile";
 import DownloaMyCV from "./DownloaMyCV";
@@ -11,13 +11,14 @@ import Twitter from "./Twitter";
 import GitHub from "./GitHub";
 import LinkedIn from "./LinkedIn";
 import CloseBtn from "./CloseBtn";
+import LogoDesign from './logoDesign';
 
 type Props = {};
 
 function NavBarMobile({}: Props): React.JSX.Element {
   const mobileWrapperRef = useRef<HTMLElement | null>(null);
 
-  const { toggleMobileMenu, ShowMobileMenu } = useMobile()!;
+  const mobileMenu = useMobile();
 
   /* useEffect(() => {
     if (
@@ -52,8 +53,12 @@ function NavBarMobile({}: Props): React.JSX.Element {
    */
   useEffect(() => {
     const resizeHandlerDebounced = debounce(() => {
-      if (window.innerWidth >= 690 && ShowMobileMenu) {
-        return toggleMobileMenu(false);
+      if (
+        window.innerWidth >= 690 &&
+        mobileMenu &&
+        mobileMenu?.ShowMobileMenu
+      ) {
+        return mobileMenu && mobileMenu?.toggleMobileMenu(false);
       }
     }, 200);
 
@@ -66,19 +71,25 @@ function NavBarMobile({}: Props): React.JSX.Element {
 
   return (
     <section
-      className={`${ShowMobileMenu ? styles["show_mobile_menu"] : ""} 
+      className={`${
+        mobileMenu && mobileMenu?.ShowMobileMenu
+          ? styles["show_mobile_menu"]
+          : ""
+      } 
       ${styles.mobile_wrap}`}
       ref={mobileWrapperRef}
     >
       <section className={styles.mobile_container}>
         <section className={styles.mobile_container_head}>
-          <Image
+          {/* <Image
             src={"/logos/ivan01-tech-png.png"}
-            width={100}
-            height={30}
+            width={91}
+            height={31}
             alt="Ivan01-tech logo"
             priority
-          />
+          /> */}
+          <LogoDesign />
+
           <div>
             {/* the button to add dark mode later */}
             {/* <ThemeBtn>
@@ -88,7 +99,7 @@ function NavBarMobile({}: Props): React.JSX.Element {
               className={styles.mobile_close_btn}
               onClick={(e) => {
                 // e.stopPropagation();
-                toggleMobileMenu(false);
+                mobileMenu && mobileMenu?.toggleMobileMenu(false);
               }}
             >
               <CloseBtn />

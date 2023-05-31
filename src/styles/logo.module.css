@@ -1,0 +1,8 @@
+.logo_wrap {
+  font-size: .9rem;
+  padding: .2rem 0.5rem;
+  border: 4px solid royalblue;
+  border-radius: 4px;
+  color: royalblue;
+  font-weight: bold;
+}

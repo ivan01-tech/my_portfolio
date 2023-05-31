@@ -20,8 +20,10 @@ function ProjectItem({ project }: Props) {
         <p className={styles.projectItem_description}>{project.description}</p>
 
         <div className={styles.projectItem_tags}>
-          {project.tags.map((tag) => (
-            <span className={styles.projectItem_tags_item}>{tag}</span>
+          {project.tags.map((tag, ind) => (
+            <span className={styles.projectItem_tags_item} key={tag + ind}>
+              {tag}
+            </span>
           ))}
         </div>
 

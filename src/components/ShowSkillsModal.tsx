@@ -8,17 +8,19 @@ import CloseBtn from "./CloseBtn";
 type Props = {};
 
 function ShowSkillsModal({}: Props) {
-  const { ShowModal, toggleModal } = useModal()!;
+  const modalcontext = useModal();
 
   return (
     <aside
-      className={`${styles.modal_wrap} ${ShowModal ? styles.shows_modal : ""}`}
+      className={`${styles.modal_wrap} ${
+        modalcontext && modalcontext.ShowModal ? styles.shows_modal : ""
+      }`}
     >
       <section className={styles.modal_content}>
         <div className={styles.modal_head}>
           <h1>Skills</h1>
-          <div onClick={() => toggleModal(false)}>
-          <CloseBtn />
+          <div onClick={() => modalcontext && modalcontext?.toggleModal(false)}>
+            <CloseBtn />
           </div>
         </div>
         <div className={styles.modal_main}>

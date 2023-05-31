@@ -16,7 +16,6 @@
 .btn:hover {
   background-color: whitesmoke;
   color: var(--secondary-text-cl);
-
 }
 .fill {
   color: white;

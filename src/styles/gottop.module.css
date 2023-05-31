@@ -2,8 +2,8 @@
   position: absolute;
   width: 50px;
   height: 50px;
-  bottom: 80px;
-  right: 20px;
+  bottom: 100px;
+  right: 30px;
   border-radius: 50%;
   background-color: var(--secondary-text-cl);
   color: white;
@@ -12,10 +12,17 @@
   z-index: 100;
   transform-origin: 50%;
   transform: rotate(-90deg);
+  box-shadow: -1px 1px 5px 7px rgba(85, 84, 84, 0.1);
 }
-.gottop_content {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  transform:translate(0%,50%);
+.gottop_wrap .gottop_content {
+  top: 50%;
+  left: 50%;
+  cursor: pointer;
+  width: min-content;
+  height: min-content;
+  background: none;
+  border: none;
+  color: white;
+  font-weight: bold;
+  transform: translate(0%, 30%);
 }

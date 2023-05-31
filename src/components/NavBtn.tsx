@@ -2,36 +2,36 @@
 import  { useRef } from "react";
 import styles from "../styles/navbtn.module.css";
 import { useMobile } from "@/Hooks/useMobile";
-import { classActive, linkIDS, navBtns } from "@/utils/constant";
+import { classActive} from "@/utils/constant";
 import { getClassWithID } from "@/utils/getClassWithID";
 
 type Props = {
   children: React.ReactNode;
   linkId: string;
   shouldCallToggle?: boolean;
+  classname?:string
 };
 
-function NavBtn({ children, linkId, shouldCallToggle }: Props) {
+function NavBtn({ children, linkId, shouldCallToggle,classname }: Props) {
   const btnRef = useRef<HTMLButtonElement | null>(null);
 
-  const { toggleMobileMenu } = useMobile()!;
+  const mobileMenu  = useMobile();
 
   let specialClassnameBtn = getClassWithID(linkId);
 
-  //console.log("class : ", specialClassnameBtn);
   /**
    * this helps to apply the scroll behavoir
    * the function to call went a link is clicked
    * @returns
    */
-  const clickHandler = () => {
+   const clickHandler = () => {
     const currentClass = classActive;
 
     const isActive = document.querySelectorAll(`.${currentClass}`);
 
     const doc = document.getElementById(linkId);
 
-    shouldCallToggle && toggleMobileMenu(false);
+    shouldCallToggle && mobileMenu && mobileMenu?.toggleMobileMenu(false);
 
     //console.log(currentClass, isActive, doc);
 
@@ -59,7 +59,7 @@ function NavBtn({ children, linkId, shouldCallToggle }: Props) {
   return (
     <button
       ref={btnRef}
-      className={`${styles.link_btn} ${specialClassnameBtn}`}
+      className={`${styles.link_btn} ${specialClassnameBtn} ${classname}`}
       onClick={clickHandler}
     >
       {children}

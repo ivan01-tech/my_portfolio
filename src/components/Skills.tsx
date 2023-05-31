@@ -1,5 +1,5 @@
 "use client";
-import  { useRef } from "react";
+import { useRef } from "react";
 import { skillsObj } from "../utils/SkillSource";
 import SkillsItem from "./SkillsItem";
 import styles from "../styles/skills.module.css";
@@ -14,12 +14,12 @@ type Props = {};
 function Skills({}: Props) {
   const skillsRef = useRef<HTMLElement | null>(null);
 
-  const { toggleModal } = useModal()!;
+  const moddalContext = useModal();
 
   /**
    *  to detect wheter the banner is visible and change the associated
    */
-  useIntersectObserver(skillsRef, { threshold:.2 });
+  useIntersectObserver(skillsRef, { threshold: 0.2 });
 
   return (
     <section ref={skillsRef} id={linkIDS.skills} className={styles.skill_wrap}>
@@ -39,12 +39,10 @@ function Skills({}: Props) {
       <div className={styles.view_all_sec}>
         <Button
           onClick={() => {
-            //console.log("called !");
-            toggleModal(true);
+            moddalContext && moddalContext?.toggleModal(true);
           }}
         >
           <span>See More </span>
-          {/* <BsArrowRight className={styles.arrLeft} /> */}
           <LongLine />
         </Button>
       </div>

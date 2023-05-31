@@ -24,7 +24,6 @@
   display: flex;
   align-items: center;
   gap: 3rem;
-  color: rgb(51, 49, 49);
 }
 
 .header_left {
@@ -42,6 +41,9 @@
   list-style-type: none;
   gap: 2rem;
 }
+.navbar_list li {
+  color: rgb(53, 54, 56);
+}
 
 .navbar_btn {
   display: flex;
@@ -54,8 +56,8 @@
   display: none;
 }
 @media screen and (max-width: 501px) {
-  .header_logo{
-  display: none;
+  .header_logo {
+    display: none;
   }
 }
 @media screen and (max-width: 689px) {
@@ -71,7 +73,7 @@
     border: none;
     background: none;
     cursor: pointer;
-    color:var(--primary-color);
+    color: var(--primary-color);
   }
 
   .navbar_list {

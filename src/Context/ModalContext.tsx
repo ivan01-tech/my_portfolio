@@ -2,13 +2,13 @@
 
 import React, { createContext, useState } from "react";
 
-export type typeContext = {
+export type typeContextModal = {
   ShowModal: boolean;
   toggleModal: (arg: boolean | null) => void;
 };
 
 // the context which help to share the modal  state
-export const ModalContext = createContext<typeContext | null>(null);
+export const ModalContext = createContext<typeContextModal | null>(null);
 
 type Props = { children: React.ReactNode };
 
@@ -27,7 +27,7 @@ export const ModalProvider = ({ children }: Props) => {
     
   };
 
-  const value: typeContext = {
+  const value: typeContextModal = {
     ShowModal,
     toggleModal,
   };

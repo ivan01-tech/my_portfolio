@@ -95,10 +95,9 @@ width: 350px;
   display: flex;
   align-items: center;
   border-radius: 5px;
-  background-color: var(--primary-bg-color);
+  background-color: #fc9d44;
   font-size: 0.7rem;
   font-weight: 500;
-  color: rgba(82, 121, 240, 0.473);
   padding: 0.3rem 0.4rem;
   font-weight: 700;
 }

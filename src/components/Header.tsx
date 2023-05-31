@@ -1,15 +1,15 @@
 "use client";
-
 import Image from "next/image";
 import Button from "./Button";
 import styles from "../styles/header.module.css";
 import { useMobile } from "../Hooks/useMobile";
 import NavBtn from "./NavBtn";
+import LogoDesign from "./logoDesign";
 
 type Props = {};
 
 function Header({}: Props) {
-  const { toggleMobileMenu } = useMobile()!;
+  const mobileMenu = useMobile();
 
   return (
     <header className={styles.header}>
@@ -18,19 +18,19 @@ function Header({}: Props) {
           {/* open hambergur menu btn */}
           <button
             className={styles.header_hamburger}
-            onClick={() => toggleMobileMenu(true)}
+            onClick={() => mobileMenu && mobileMenu.toggleMobileMenu(true)}
           >
             &#9776;
           </button>
-
-          <Image
+          {/* <Image
             src={"/logos/ivan01-tech-png.png"}
-            width={100}
-            height={30}
+            width={91}
+            height={31}
             alt="Ivan01-tech logo"
             priority
             className={styles.header_logo}
-          />
+          /> */}
+          <LogoDesign hideClass={styles.header_logo} />
         </div>
 
         <nav aria-label="menu-full-screen" className={styles.navbar}>
@@ -47,7 +47,6 @@ function Header({}: Props) {
           </ul>
 
           <div className={styles.navbar_btn}>
-
             <Button>Contact Me</Button>
             {/* the button to add dark mode later */}
             {/* <ThemeBtn>

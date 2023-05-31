@@ -2,12 +2,12 @@
 
 import React, { createContext, useState } from "react";
 
-type typeContext = {
+export type typeContextMobile = {
   ShowMobileMenu: boolean;
   toggleMobileMenu: (arg: boolean | null) => void;
 };
 // the context which help to share the mobile menu state
-export const MobileMenuContext = createContext<typeContext | null>(null);
+export const MobileMenuContext = createContext<typeContextMobile | null>(null);
 
 type Props = { children: React.ReactNode };
 
@@ -26,7 +26,7 @@ export const MobileMenuPovider = ({ children }: Props) => {
     
   };
 
-  const value: typeContext = {
+  const value: typeContextMobile = {
     ShowMobileMenu,
     toggleMobileMenu,
   };
