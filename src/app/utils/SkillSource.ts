@@ -9,7 +9,7 @@ export const skillsObj: SkillType[] = [
   },
   {
     name: "JavaScript",
-    path: "/public/logos/javascript.svg",
+    path: "/logos/javascript.svg",
   },
   {
     name: "TypeScript",

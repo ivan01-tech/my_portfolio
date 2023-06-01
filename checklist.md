@@ -9,8 +9,3 @@
 - meta name robots
 - robots.txt , sitemap
 - favicon
-
-
-<LazyLoad offset={100}> <Footer /></LazyLoad>
-  set the prefetch link to false
- 

@@ -102,6 +102,11 @@ width: 350px;
   font-weight: 700;
 }
 
+ .projectItem_wrap .image{
+
+  max-height: 200px;
+ }
+
 @media screen and (max-width: 751px) {
   .projectItem_wrap {
     width: 70%;

@@ -13,6 +13,7 @@ function ProjectItem({ project }: Props) {
           alt={project.projectName}
           width={450}
           height={300}
+          className={styles.image}
         />
       </section>
       <section className={styles.projectItem_right}>

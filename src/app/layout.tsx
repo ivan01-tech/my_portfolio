@@ -1,3 +1,5 @@
+import "./globals.css"
+
 import type { Metadata } from "next";
 import dynamic from "next/dynamic";
 import { ModalProvider } from "./Context/ModalContext";

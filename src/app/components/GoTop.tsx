@@ -6,8 +6,8 @@ type Props = {};
 
 function GoTop({}: Props) {
   return (
-    <div className={styles.gottop_wrap}>
-      <NavBtn linkId={"home_banner"} classname={styles.gottop_content}>
+    <div className={styles.gottop_wrap} title="Go to the home">
+      <NavBtn linkId={"home_banner"} classname={styles.gottop_content} >
         <LongLine />
       </NavBtn>
     </div>

@@ -1,6 +1,6 @@
 "use client";
 import React, { useRef } from "react";
-import styles from "../styles/banner.module.css";
+import styles from "../styles/banner.module.css"
 import DownloaMyCV from "./DownloaMyCV";
 import HireMe from "./HireMe";
 import { animationTime, linkIDS } from "@/app/utils/constant";
