@@ -23,7 +23,7 @@ export const projectsSource: ProjectsItem[] = [
       "A chat app where you can create a room and chat with your friends.",
     link: "https://chat-app-cucz.onrender.com/",
     source: "https://github.com/ivan01-tech/socket.io-chat-app.git",
-    tags: [],
+    tags: ["NodeJS","Socket.io","TypeScript","CSS"],
     projectName:"Chat App"
   },
   {

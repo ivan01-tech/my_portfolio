@@ -23,7 +23,7 @@ function Projects({}: Props) {
     >
       <h2 className={`title`}>Projects</h2>
       <p className={`description`}>
-        Since i start web developement, i worked on many personal projects and
+        Since I start web development, I worked on many personal projects and
         here are some of them!
       </p>
 

@@ -14,7 +14,7 @@ const LazyModal = dynamic(() => import("./components/ShowSkillsModal"));
 export const metadata: Metadata= {
   description:
     "I'm a fullstack web developer. I like to develop , test, and deploy web apps using javascript technologies",
-  title: "Portfolio - Ivan01-tech",
+  title: "Portfolio | Ivan01-tech",
   robots: "index, follow",
 };
 
