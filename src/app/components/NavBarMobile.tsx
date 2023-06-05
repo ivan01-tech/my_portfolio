@@ -1,6 +1,5 @@
 "use client";
-import Image from "next/image";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import styles from "../styles/mobile.module.css";
 import { useMobile } from "@/app/Hooks/useMobile";
 import DownloaMyCV from "./DownloaMyCV";
@@ -11,11 +10,14 @@ import Twitter from "./Twitter";
 import GitHub from "./GitHub";
 import LinkedIn from "./LinkedIn";
 import CloseBtn from "./CloseBtn";
-import LogoDesign from './logoDesign';
+import LogoDesign from "./logoDesign";
 
 type Props = {};
 
 function NavBarMobile({}: Props): React.JSX.Element {
+  // to manage the with and the heightof the window
+  const [windowInnerWidth, setWindowInnerWidth] = useState<number>(window.innerWidth);
+
   const mobileWrapperRef = useRef<HTMLElement | null>(null);
 
   const mobileMenu = useMobile();
@@ -52,15 +54,11 @@ function NavBarMobile({}: Props): React.JSX.Element {
    *  to close the navbar mobile when the size is more than the default one
    */
   useEffect(() => {
-    const resizeHandlerDebounced = debounce(() => {
-      if (
-        window.innerWidth >= 690 &&
-        mobileMenu &&
-        mobileMenu?.ShowMobileMenu
-      ) {
-        return mobileMenu && mobileMenu?.toggleMobileMenu(false);
-      }
-    }, 200);
+    const resizeHandler = () => {
+      setWindowInnerWidth(window.innerWidth);
+    };
+
+    const resizeHandlerDebounced = debounce(resizeHandler, 200);
 
     window.addEventListener("resize", resizeHandlerDebounced);
 
@@ -69,10 +67,17 @@ function NavBarMobile({}: Props): React.JSX.Element {
     };
   }, []);
 
+  
+  // (help with to show or hide the mobile base on the window width automatically )
+  // windowInnerWidth >= 690 && mobileMenu && mobileMenu?.toggleMobileMenu(false);
+  console.log("the width : ", windowInnerWidth);
+
   return (
     <section
       className={`${
-        mobileMenu && mobileMenu?.ShowMobileMenu
+        windowInnerWidth >= 690
+          ? ""
+          : mobileMenu && mobileMenu.ShowMobileMenu
           ? styles["show_mobile_menu"]
           : ""
       } 
