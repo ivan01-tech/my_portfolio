@@ -16,7 +16,9 @@ type Props = {};
 
 function NavBarMobile({}: Props): React.JSX.Element {
   // to manage the with and the heightof the window
-  const [windowInnerWidth, setWindowInnerWidth] = useState<number>(window.innerWidth);
+  const [windowInnerWidth, setWindowInnerWidth] = useState<number>(
+    typeof window == "undefined" ? 500 : window.innerWidth
+  );
 
   const mobileWrapperRef = useRef<HTMLElement | null>(null);
 
@@ -67,7 +69,6 @@ function NavBarMobile({}: Props): React.JSX.Element {
     };
   }, []);
 
-  
   // (help with to show or hide the mobile base on the window width automatically )
   // windowInnerWidth >= 690 && mobileMenu && mobileMenu?.toggleMobileMenu(false);
   console.log("the width : ", windowInnerWidth);
@@ -76,7 +77,7 @@ function NavBarMobile({}: Props): React.JSX.Element {
     <section
       className={`${
         windowInnerWidth >= 690
-          ? ""
+          ? " "
           : mobileMenu && mobileMenu.ShowMobileMenu
           ? styles["show_mobile_menu"]
           : ""
